@@ -6,7 +6,7 @@ This plan tracks the tasks required to implement the manifest auditing and valid
 
 ## Phase 1: Local Audit Script Scaffolding
 
-- [ ] Task: Write Tests for checking JSON schema compliance locally (TDD Red)
+- [x] Task: Write Tests for checking JSON schema compliance locally (TDD Red) [f6f946e]
 - [ ] Task: Implement Feature to validate JSON schema against official Scoop schema (TDD Green)
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Local Audit Script Scaffolding' (Protocol in workflow.md)
 
