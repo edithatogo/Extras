@@ -12,8 +12,9 @@
     "installer":  {
                       "type":  "unknown",
                       "evidence":  [
-                                       "Chocolatey community package powerautomatedesktop exists.",
-                                       "No local Scoop manifest found."
+                                   "Chocolatey community package powerautomatedesktop exists.",
+                                       "No local Scoop manifest found.",
+                                       "PR #1 review comments required installer/uninstaller/dependency fixes for a system-wide EXE route; that route is rejected for this no-admin factory."
                                    ]
                   },
     "no_admin":  {
@@ -31,7 +32,7 @@
                     "scoop":  {
                                   "status":  "blocked",
                                   "expected_manifest":  null,
-                                  "no_admin_strategy":  "No local Scoop bucket route found; desktop automation installs commonly require machine components and admin approval."
+                                  "no_admin_strategy":  "Do not add a Scoop manifest that invokes the system-wide Setup.Microsoft.PowerAutomate.exe route; review findings require admin/machine-scope lifecycle handling."
                               },
                     "chocolatey":  {
                                        "status":  "blocked",
@@ -64,6 +65,6 @@
                       "hardening_report":  "packaging/reports/power-automate-desktop-hardening.md",
                       "smoke_report":  "packaging/reports/power-automate-desktop-noadmin-smoke.md",
                       "last_reviewed":  "2026-06-15",
-                      "decision":  "Blocked for no-admin hardening until isolated evidence proves a user-scope install with no machine side effects."
+                      "decision":  "Blocked for no-admin hardening. PR #1 comments were addressed by rejecting the machine-scope Setup.Microsoft.PowerAutomate.exe manifest rather than adding admin install/uninstall behavior."
                   }
 }

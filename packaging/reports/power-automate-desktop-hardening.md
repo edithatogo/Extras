@@ -12,6 +12,7 @@
 ## Installer Evidence
 - Chocolatey community package powerautomatedesktop exists.
 - No local Scoop manifest found.
+- PR #1 review comments required installer/uninstaller/dependency fixes for a system-wide EXE route; that route is rejected for this no-admin factory.
 
 ## No-Admin Strategy
 Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.
@@ -24,8 +25,8 @@ Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists
 - unofficial or ambiguous source identity
 
 ## Target Posture
-- Scoop: `blocked` - No local Scoop bucket route found; desktop automation installs commonly require machine components and admin approval.
+- Scoop: `blocked` - Do not add a Scoop manifest that invokes the system-wide Setup.Microsoft.PowerAutomate.exe route; review findings require admin/machine-scope lifecycle handling.
 - Chocolatey: `blocked` - Chocolatey package exists but is not accepted as no-admin without proof that it avoids machine scope, services, drivers, and HKLM.
 
 ## Decision
-Blocked for no-admin hardening until isolated evidence proves a user-scope install with no machine side effects.
+Blocked for no-admin hardening. PR #1 comments were addressed by rejecting the machine-scope Setup.Microsoft.PowerAutomate.exe manifest rather than adding admin install/uninstall behavior.
