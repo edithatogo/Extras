@@ -14,6 +14,7 @@
 - [x] Task: Add or update package contract under `packaging/contracts/`.
 - [x] Task: Generate hardening and no-admin smoke evidence report paths.
 - [x] Task: Keep this track terminal without claiming runtime smoke where runtime was not executed.
+- [x] Task: Resolve PR #1 review comments by removing the unsafe system installer manifest and keeping the route blocked.
 
 Execution status:
 - Contract status: $(@{Id=power-automate-desktop; Name=Power Automate Desktop; Version=2.67.143.26090; Track=power_automate_desktop_20260615; Status=blocked; State=blocked; Runtime=blocked; Priority=requested; Installer=unknown; Scoop=blocked; ScoopManifest=; ScoopStrategy=No local Scoop bucket route found; desktop automation installs commonly require machine components and admin approval.; Choco=blocked; ChocoId=powerautomatedesktop; ChocoStrategy=Chocolatey package exists but is not accepted as no-admin without proof that it avoids machine scope, services, drivers, and HKLM.; Evidence=System.Object[]; Decision=Blocked for no-admin hardening until isolated evidence proves a user-scope install with no machine side effects.; Desc=Track Power Automate Desktop no-admin packaging posture.}.Status).
