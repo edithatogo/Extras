@@ -14,6 +14,7 @@
 - [x] Task: Add or update package contract under `packaging/contracts/`.
 - [x] Task: Generate hardening and no-admin smoke evidence report paths.
 - [x] Task: Keep this track terminal without claiming runtime smoke where runtime was not executed.
+- [x] Task: Resolve PR #2 review comments by removing the unsafe Power BI Desktop system installer manifest and keeping the route blocked.
 
 Execution status:
 - Contract status: $(@{Id=power-bi-desktop; Name=Power BI Desktop; Version=; Track=power_bi_desktop_20260615; Status=blocked; State=blocked; Runtime=blocked; Priority=requested; Installer=msi; Scoop=blocked; ScoopManifest=; ScoopStrategy=No local Scoop bucket route found; block no-admin packaging because supported installers are machine/Store/enterprise oriented.; Choco=blocked; ChocoId=powerbi; ChocoStrategy=No confirmed no-admin Chocolatey route; block until user-scoped installer evidence exists.; Evidence=System.Object[]; Decision=Blocked for no-admin Scoop/Chocolatey packaging pending a supported user-scoped installer.; Desc=Track Power BI Desktop no-admin package-manager posture.}.Status).

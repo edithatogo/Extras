@@ -12,8 +12,9 @@
     "installer":  {
                       "type":  "msi",
                       "evidence":  [
-                                       "Local Scoop buckets did not include Power BI Desktop.",
-                                       "Registry showed related Bravo for Power BI only, not Power BI Desktop."
+                                   "Local Scoop buckets did not include Power BI Desktop.",
+                                       "Registry showed related Bravo for Power BI only, not Power BI Desktop.",
+                                       "PR #2 review comments required install-location, uninstaller, shortcut, and autoupdate fixes for a system-wide EXE route; that route is rejected for this no-admin factory."
                                    ]
                   },
     "no_admin":  {
@@ -31,7 +32,7 @@
                     "scoop":  {
                                   "status":  "blocked",
                                   "expected_manifest":  null,
-                                  "no_admin_strategy":  "No local Scoop bucket route found; block no-admin packaging because supported installers are machine/Store/enterprise oriented."
+                                  "no_admin_strategy":  "Do not add a Scoop manifest that invokes PBIDesktopSetup as a managed system installer; review findings require machine-scope lifecycle handling and do not satisfy no-admin packaging."
                               },
                     "chocolatey":  {
                                        "status":  "blocked",
@@ -64,6 +65,6 @@
                       "hardening_report":  "packaging/reports/power-bi-desktop-hardening.md",
                       "smoke_report":  "packaging/reports/power-bi-desktop-noadmin-smoke.md",
                       "last_reviewed":  "2026-06-15",
-                      "decision":  "Blocked for no-admin Scoop/Chocolatey packaging pending a supported user-scoped installer."
+                      "decision":  "Blocked for no-admin Scoop/Chocolatey packaging. PR #2 comments were addressed by rejecting the PBIDesktopSetup system-installer manifest rather than adding admin install/uninstall behavior."
                   }
 }
