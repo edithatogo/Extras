@@ -1,0 +1,37 @@
+{
+    "version": "2.5.6",
+    "description": "Free and open-source DJ mixing software.",
+    "homepage": "https://mixxx.org",
+    "license": "GPL-2.0-or-later",
+    "notes": [
+        "No-admin route uses MSI administrative extraction into Scoop's user-writable app directory.",
+        "The installer is not executed, so MSI custom actions, machine registry writes, and Program Files writes are avoided."
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.mixxx.org/releases/2.5.6/mixxx-2.5.6-win64.msi",
+            "hash": "0d1f01a1f5c2e4d4180cd462e60365d0230b405808e7bd2b6625b62a53a29c72"
+        }
+    },
+    "bin": "Mixxx\\mixxx.exe",
+    "shortcuts": [
+        [
+            "Mixxx\\mixxx.exe",
+            "Mixxx"
+        ]
+    ],
+    "checkver": {
+        "url": "https://mixxx.org/download/",
+        "regex": "Download Mixxx ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.mixxx.org/releases/$version/mixxx-$version-win64.msi",
+                "hash": {
+                    "url": "https://downloads.mixxx.org/releases/$version/mixxx-$version-win64.msi.sha256sum"
+                }
+            }
+        }
+    }
+}

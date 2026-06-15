@@ -1,0 +1,65 @@
+{
+  "schema_version": "1.0",
+  "id": "power-platform-toolbox",
+  "name": "Power Platform ToolBox",
+  "version": "1.2.1",
+  "priority": "high-signal",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Installed current-user under AppData\\Local\\Programs"
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Prefer extractable current-user installer; block machine-scope install.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "candidate",
+      "expected_manifest": "bucket/power-platform-toolbox.json",
+      "no_admin_strategy": "Probe upstream source for extractable or current-user payload."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "power-platform-toolbox",
+      "no_admin_strategy": "Portable package only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "power platform toolbox"
+    ],
+    "chocolatey_terms": [
+      "powerplatformtoolbox",
+      "power-platform-toolbox"
+    ],
+    "winget_terms": [
+      "Power Platform ToolBox"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/installed_candidates_20260614/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/power-platform-toolbox-hardening.md",
+    "smoke_report": "packaging/reports/power-platform-toolbox-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}

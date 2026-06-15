@@ -1,0 +1,80 @@
+{
+    "schema_version":  "1.0",
+    "id":  "omnivoice-studio",
+    "name":  "OmniVoice Studio",
+    "version":  "0.3.5",
+    "priority":  "requested",
+    "candidate_status":  "candidate",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "sources":  [
+                    {
+                        "type":  "public-release",
+                        "path":  "https://github.com/debpalash/OmniVoice-Studio/releases/download/v0.3.5/OmniVoice.Studio_0.3.5_x64_en-US.msi",
+                        "sha256":  "39529182A1C61A561FFFC82C82C5886B8E4C640BF153C6134D9570099192E906",
+                        "signature":  "NotSigned",
+                        "status":  "manifest-source"
+                    }
+                ],
+    "installer":  {
+                      "type":  "msi",
+                      "evidence":  [
+                                       "MSI ProductName OmniVoice Studio",
+                                       "ALLUSERS=1",
+                                       "extracted payload directory PFiles\\OmniVoice Studio",
+                                       "launch target omnivoice-studio.exe",
+                                       "custom action downloads and invokes Microsoft Edge WebView2 installer"
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Extract MSI/CAB payload into a user-writable package directory; never execute MSI custom actions.",
+                     "hard_blockers":  [
+                                           "msiexec /i",
+                                           "ALLUSERS=1 execution",
+                                           "WebView2 machine bootstrap",
+                                           "Program Files write"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "implemented",
+                                  "expected_manifest":  "bucket/omnivoice-studio.json",
+                                  "no_admin_strategy":  "Extract MSI payload into PFiles\\OmniVoice Studio; launch PFiles\\OmniVoice Studio\\omnivoice-studio.exe."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "omnivoice-studio",
+                                       "no_admin_strategy":  "Portable extraction under $toolsDir only; block MSI execution."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "omnivoice",
+                                                 "omnivoice studio"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "omnivoice",
+                                                      "omnivoice-studio"
+                                                  ],
+                             "winget_terms":  [
+                                                  "OmniVoice Studio"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/omnivoice_studio_20260613/",
+    "readiness":  {
+                      "state":  "implemented",
+                      "runtime_validation":  "passed",
+                      "hardening_report":  "packaging/reports/omnivoice-studio-hardening.md",
+                      "smoke_report":  "packaging/reports/omnivoice-studio-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                  }
+}

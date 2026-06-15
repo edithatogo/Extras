@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "codex",
+  "name": "Codex",
+  "version": "0.139.0",
+  "priority": "requested",
+  "candidate_status": "covered",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "portable",
+    "evidence": [
+      "Local Scoop main/codex manifest version 0.139.0 uses direct OpenAI GitHub release binaries.",
+      "Chocolatey package source added under packaging/chocolatey/codex."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Use the upstream package-manager route; do not duplicate package logic locally unless upstream route fails no-admin policy.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write",
+      "service or driver registration",
+      "unofficial or ambiguous source identity"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "covered",
+      "expected_manifest": null,
+      "no_admin_strategy": "Use upstream Scoop main/codex; direct GitHub release exe shims are user-writable and no local fork manifest is needed."
+    },
+    "chocolatey": {
+      "status": "implemented",
+      "package_id": "codex",
+      "no_admin_strategy": "Chocolatey package source downloads OpenAI Codex release binaries directly into $toolsDir and installs a shim only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "codex",
+      "Codex"
+    ],
+    "chocolatey_terms": [
+      "codex",
+      "Codex"
+    ],
+    "winget_terms": [
+      "Codex"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/codex_20260615/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/codex-hardening.md",
+    "smoke_report": "packaging/reports/codex-noadmin-smoke.md",
+    "last_reviewed": "2026-06-15",
+    "decision": "Upstream Scoop remains covered; repo-local Chocolatey package source added, pending isolated install and command smoke proof."
+  }
+}

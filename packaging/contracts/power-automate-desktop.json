@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "power-automate-desktop",
+    "name":  "Power Automate Desktop",
+    "version":  "2.67.143.26090",
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "unknown",
+                      "evidence":  [
+                                       "Chocolatey community package powerautomatedesktop exists.",
+                                       "No local Scoop manifest found."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No local Scoop bucket route found; desktop automation installs commonly require machine components and admin approval."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  "powerautomatedesktop",
+                                       "no_admin_strategy":  "Chocolatey package exists but is not accepted as no-admin without proof that it avoids machine scope, services, drivers, and HKLM."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "power-automate-desktop",
+                                                 "Power Automate Desktop"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "power-automate-desktop",
+                                                      "Power Automate Desktop"
+                                                  ],
+                             "winget_terms":  [
+                                                  "Power Automate Desktop"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/power_automate_desktop_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/power-automate-desktop-hardening.md",
+                      "smoke_report":  "packaging/reports/power-automate-desktop-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked for no-admin hardening until isolated evidence proves a user-scope install with no machine side effects."
+                  }
+}

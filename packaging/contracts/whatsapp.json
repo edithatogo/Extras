@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "whatsapp",
+    "name":  "WhatsApp Official App",
+    "version":  null,
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "unknown",
+                      "evidence":  [
+                                       "Local Scoop buckets did not include WhatsApp.",
+                                       "No confirmed official Chocolatey route was identified."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No local Scoop manifest for official WhatsApp Desktop; avoid unofficial wrappers."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  "whatsapp",
+                                       "no_admin_strategy":  "No confirmed official Chocolatey route; official app is Store/WinGet oriented and outside this no-admin Scoop/Chocolatey contract."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "whatsapp",
+                                                 "WhatsApp Official App"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "whatsapp",
+                                                      "WhatsApp Official App"
+                                                  ],
+                             "winget_terms":  [
+                                                  "WhatsApp Official App"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/whatsapp_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/whatsapp-hardening.md",
+                      "smoke_report":  "packaging/reports/whatsapp-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked for official no-admin Scoop/Chocolatey packaging; prefer Store/WinGet governance outside this bucket."
+                  }
+}

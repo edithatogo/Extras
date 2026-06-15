@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>antigravity</id>
+    <version>2.1.4</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>Antigravity</title>
+    <authors>Google</authors>
+    <projectUrl>https://antigravity.google/</projectUrl>
+    <licenseUrl>https://antigravity.google/terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AI-powered IDE developed by Google.</description>
+    <summary>Antigravity no-admin extraction-first package candidate.</summary>
+    <tags>antigravity ide ai no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
