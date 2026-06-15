@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>omnivoice-studio</id>
+    <version>0.3.5</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>OmniVoice Studio</title>
+    <authors>OmniVoice Studio contributors</authors>
+    <projectUrl>https://github.com/debpalash/OmniVoice-Studio</projectUrl>
+    <licenseUrl>https://github.com/debpalash/OmniVoice-Studio/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Open-source, local-first desktop voice cloning and dubbing studio.</description>
+    <summary>OmniVoice Studio no-admin extraction-only package candidate.</summary>
+    <tags>omnivoice voice cloning dubbing no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

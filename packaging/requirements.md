@@ -29,6 +29,9 @@ Systematise conversion of high-signal Windows applications into Scoop manifests 
 - Chocolatey candidate or implemented targets must have submission notes under `packaging/submissions/chocolatey/`.
 - Implemented Chocolatey targets must have package source files under `packaging/chocolatey/<package_id>/`, including a `.nuspec` and `tools/chocolateyinstall.ps1`.
 - CI submission readiness must statically reject implemented Chocolatey install scripts that invoke admin helpers, machine-scope package installers, Program Files, HKLM, or service registration patterns.
+- CI must run `tools/package-audit/Test-NoAdminPackageSources.ps1` to enforce extraction-first, toolsDir-anchored Chocolatey package sources.
+- CI must run `tools/package-audit/Test-ChocolateyPackages.ps1` to compile every implemented Chocolatey package source with `choco pack`.
+- CI must keep Chocolatey package build outputs in a disposable temp/cache location and must not require committed `.nupkg` artifacts.
 - CI must validate submission readiness before reviewer handoff.
 
 ### Should
@@ -38,6 +41,7 @@ Systematise conversion of high-signal Windows applications into Scoop manifests 
 - Run a cross-manager installed-app signal audit (Scoop, Chocolatey, WinGet) and store overlap evidence before changing candidate priority.
 - Add no-admin smoke tests for changed candidates once manifests/packages exist.
 - Add static checks for UAC, HKLM, Program Files, services, drivers, and WebView2 bootstrap behavior.
+- Add a label- or dispatch-driven Windows extraction/runtime job for packages whose source download and extraction can be safely run without install side effects.
 - Promote installed-app audit candidates into dedicated tracks only after source provenance and duplicate lookup justify implementation.
 
 ### Could
@@ -55,7 +59,10 @@ Systematise conversion of high-signal Windows applications into Scoop manifests 
 ## Acceptance Criteria
 - `tools/package-audit/Test-PackageContracts.ps1` exits successfully.
 - `tools/package-audit/Test-SubmissionReadiness.ps1` exits successfully.
+- `tools/package-audit/Test-NoAdminPackageSources.ps1` exits successfully.
+- `tools/package-audit/Test-ChocolateyPackages.ps1` exits successfully.
 - Implemented Chocolatey targets fail submission readiness if package-source files are missing or contain blocked machine-scope patterns.
+- Implemented Chocolatey targets fail package validation if `choco pack` cannot compile the source.
 - `tools/package-audit/Find-Existing.ps1` writes `packaging/cache/package-existence.json` and `packaging/reports/package-existence.md`.
 - `tools/package-audit/New-CandidateReport.ps1` writes `packaging/reports/candidate-ranking.md`.
 - CI runs the contract validator and offline report generation after the existing Scoop tests.

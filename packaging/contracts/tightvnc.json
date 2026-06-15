@@ -4,7 +4,7 @@
   "name": "TightVNC Full Bundle",
   "version": "2.8.87",
   "priority": "high-signal",
-  "candidate_status": "deferred",
+  "candidate_status": "covered",
   "source_policy": {
     "public_url_required": true,
     "local_files_are_evidence_only": true
@@ -19,7 +19,7 @@
   },
   "no_admin": {
     "required": true,
-    "strategy": "Defer full-bundle hardening; use viewer-only extraction route unless server/service behavior is explicitly required and validated.",
+    "strategy": "Keep the existing Scoop full-bundle manifest available as extraction-only coverage, but use the viewer-only extraction route for hardened no-admin Android mirroring unless server behavior is explicitly required and validated.",
     "hard_blockers": [
       "runtime services started by the vendor installer may still occur for optional server modes",
       "admin-required driver or helper registration in selected feature sets",
@@ -28,9 +28,9 @@
   },
   "targets": {
     "scoop": {
-      "status": "deferred",
+      "status": "covered",
       "expected_manifest": "bucket/tightvnc.json",
-      "no_admin_strategy": "Existing bundle is not the hardened route because it exposes tvnserver.exe; use tightvnc-viewer for the no-admin droidVNC-NG workflow."
+      "no_admin_strategy": "Existing Scoop manifest extracts the upstream MSI into the Scoop app directory without executing msiexec. Because it exposes tvnserver.exe, prefer tightvnc-viewer for hardened no-admin droidVNC-NG workflows."
     },
     "chocolatey": {
       "status": "deferred",
@@ -59,11 +59,11 @@
   },
   "track": "conductor/tracks/tightvnc_20260613/",
   "readiness": {
-    "state": "deferred",
-    "runtime_validation": "deferred",
+    "state": "covered",
+    "runtime_validation": "not-required",
     "hardening_report": "packaging/reports/tightvnc-hardening.md",
     "smoke_report": "packaging/reports/tightvnc-noadmin-smoke.md",
     "last_reviewed": "2026-06-14",
-    "decision": "Full TightVNC bundle is deferred from hardened completion; viewer-only package carries the no-admin desktop-client route."
+    "decision": "Scoop full-bundle coverage remains available through bucket/tightvnc.json and is not blocked by Chocolatey deferral. Hardened no-admin desktop-client completion remains carried by tightvnc-viewer."
   }
 }

@@ -45,6 +45,12 @@ jobs:
       - name: Validate package submission readiness
         run: |
           .\my_bucket\tools\package-audit\Test-SubmissionReadiness.ps1
+      - name: Validate no-admin package source guardrails
+        run: |
+          .\my_bucket\tools\package-audit\Test-NoAdminPackageSources.ps1
+      - name: Pack Chocolatey package sources
+        run: |
+          .\my_bucket\tools\package-audit\Test-ChocolateyPackages.ps1
       - name: Validate CI contracts
         run: |
           .\my_bucket\tools\package-audit\Test-CiContracts.ps1

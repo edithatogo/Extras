@@ -31,7 +31,7 @@ This track hardens Pinokio into a reproducible and auditable no-admin package ou
 ## Phase 4: Chocolatey Feasibility
 
 - [x] Task: Document portable package layout feasibility and limitations in `packaging/contracts/pinokio.json`.
-- [x] Task: Add explicit "out of scope in this repo" for Chocolatey package files.
+- [x] Task: Add Chocolatey package source files under `packaging/chocolatey/pinokio/`.
 - [x] Task: Add decision entry for fallback if extraction or no-admin route fails.
 - [x] Task: Manual verification gate recorded as deferred/not-run; see runtime status in `packaging/reports/sota-readiness.md`.
 - [x] Task: Finalize track to terminal candidate state with hardening evidence attached and runtime smoke explicitly deferred.
@@ -46,3 +46,5 @@ Execution status:
 - Blocker: this environment did not run isolated install/launch/uninstall validation; track is implemented for the Scoop manifest; GUI launch and uninstall cleanup remain separate follow-up evidence if needed.
 
 Implementation closure (2026-06-15): local Scoop install validation passed for the manifest, expected binaries were present under the user Scoop app directory, and no matching service was observed. Evidence is recorded in the contract hardening and no-admin smoke reports.
+
+Chocolatey closure (2026-06-15): package source added with NSIS wrapper extraction plus embedded `app-64.7z` extraction into `tools\app`; isolated Chocolatey install, launch, and uninstall proof remains a separate hardening gate.

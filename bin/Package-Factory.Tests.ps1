@@ -65,6 +65,20 @@ Describe "No-admin package factory contracts" {
         }
     }
 
+    It "Validates no-admin Chocolatey package source guardrails" {
+        $script = Join-Path $script:RepoRoot 'tools\package-audit\Test-NoAdminPackageSources.ps1'
+        $output = & $script 2>&1
+        $exitCode = if ($LASTEXITCODE -eq $null) { 0 } else { $LASTEXITCODE }
+        Assert-Equal $exitCode 0 "No-admin Chocolatey source validation failed. $output"
+    }
+
+    It "Packs implemented Chocolatey package sources" {
+        $script = Join-Path $script:RepoRoot 'tools\package-audit\Test-ChocolateyPackages.ps1'
+        $output = & $script 2>&1
+        $exitCode = if ($LASTEXITCODE -eq $null) { 0 } else { $LASTEXITCODE }
+        Assert-Equal $exitCode 0 "Chocolatey package source packing failed. $output"
+    }
+
     It "Generates installed-candidate signal report" {
         $installedAudit = Join-Path $script:RepoRoot 'tools\package-audit\Find-InstalledCandidates.ps1'
         $installedReport = Join-Path $script:RepoRoot 'packaging\reports\installed-candidates-review.md'

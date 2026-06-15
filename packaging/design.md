@@ -37,7 +37,11 @@ flowchart LR
     I --> SI[installed-candidates-review.md]
     C --> Q[New-CandidateReport.ps1]
     Q --> M[candidate-ranking.md]
+    C --> NC[Test-NoAdminPackageSources.ps1]
+    C --> CP[Test-ChocolateyPackages.ps1]
     V --> CI[GitHub Actions CI]
+    NC --> CI
+    CP --> CI
     R --> CI
     HR --> CI
     SR --> CI
@@ -119,12 +123,29 @@ flowchart TD
     F -- yes --> G[Chocolatey submission note]
     G --> H{Chocolatey implemented?}
     H -- yes --> K[.nuspec and tools/chocolateyinstall.ps1]
+    K --> N[Test-NoAdminPackageSources.ps1]
+    N --> O[Test-ChocolateyPackages.ps1]
     H -- no --> L[Feasibility note only]
     F -- no --> M[No Chocolatey submission required]
     D --> I[Test-SubmissionReadiness.ps1]
-    K --> I
+    O --> I
     L --> I
     I --> J[GitHub Actions gate]
+```
+
+## Remote Automation Boundary
+
+```mermaid
+flowchart TD
+    A[Pull request] --> B[Static contract gates]
+    B --> C[No-admin source guardrails]
+    C --> D[choco pack for implemented packages]
+    D --> E[Offline reports and Pester]
+    E --> F{Safe to run without side effects?}
+    F -- yes --> G[Optional extraction-only Windows job]
+    F -- no --> H[Manual/disposable runtime gate]
+    G --> I[Attach extraction evidence]
+    H --> J[Install, launch, uninstall evidence]
 ```
 
 ## Chocolatey No-Admin Flow
@@ -150,3 +171,4 @@ flowchart TD
 - Any elevation, machine-wide install, service, driver, HKLM write, or Program Files write blocks no-admin readiness.
 - WebView2-dependent apps must use an existing user/fixed runtime strategy rather than machine bootstrapping.
 - Implemented Chocolatey targets require concrete package-source files and static no-admin script checks; a Markdown submission note alone is not sufficient.
+- Remote CI can prove static contracts, blocked-pattern absence, and Chocolatey package compilation. It must not claim GUI launch, full installation, uninstall cleanup, or registry/service delta proof unless a dedicated runtime job actually runs those checks.

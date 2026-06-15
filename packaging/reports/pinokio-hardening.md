@@ -13,6 +13,7 @@
 - NSIS-3 Unicode installer
 - contains $PLUGINSDIR\app-64.7z
 - inner archive contains Pinokio.exe
+- Chocolatey package source added under packaging/chocolatey/pinokio with extraction-only install logic.
 
 ## No-Admin Strategy
 Extract the NSIS payload and expand app-64.7z into the Scoop app directory; do not execute the installer.
@@ -25,7 +26,7 @@ Extract the NSIS payload and expand app-64.7z into the Scoop app directory; do n
 
 ## Target Posture
 - Scoop: `implemented` - Use #/dl.7z and Expand-7zipArchive on $PLUGINSDIR\app-64.7z.
-- Chocolatey: `candidate` - Portable package under $toolsDir only; do not run installer.
+- Chocolatey: `implemented` - Download official GitHub release, extract the NSIS wrapper and embedded app-64.7z into $toolsDir\app, and install a shim only.
 
 ## Decision
-Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only.
+Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey package source is implemented with extraction-only install logic; isolated Chocolatey runtime proof remains pending.

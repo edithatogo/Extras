@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pinokio</id>
+    <version>7.2.6</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>Pinokio</title>
+    <authors>Pinokio Computer</authors>
+    <projectUrl>https://pinokio.co</projectUrl>
+    <licenseUrl>https://github.com/pinokiocomputer/pinokio/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AI browser to launch AI apps and workflows from one interface.</description>
+    <summary>Pinokio no-admin extraction-only package candidate.</summary>
+    <tags>pinokio ai browser workflow no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

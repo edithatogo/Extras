@@ -15,6 +15,7 @@
 - extracted payload directory PFiles\OmniVoice Studio
 - launch target omnivoice-studio.exe
 - custom action downloads and invokes Microsoft Edge WebView2 installer
+- Chocolatey package source added under packaging/chocolatey/omnivoice-studio with 7-Zip MSI extraction only.
 
 ## No-Admin Strategy
 Extract MSI/CAB payload into a user-writable package directory; never execute MSI custom actions.
@@ -27,7 +28,7 @@ Extract MSI/CAB payload into a user-writable package directory; never execute MS
 
 ## Target Posture
 - Scoop: `implemented` - Extract MSI payload into PFiles\OmniVoice Studio; launch PFiles\OmniVoice Studio\omnivoice-studio.exe.
-- Chocolatey: `candidate` - Portable extraction under $toolsDir only; block MSI execution.
+- Chocolatey: `implemented` - Download official GitHub release MSI, extract with 7-Zip into $toolsDir\app, and install a shim only.
 
 ## Decision
-Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only.
+Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey package source is implemented with extraction-only install logic; isolated Chocolatey runtime proof remains pending.

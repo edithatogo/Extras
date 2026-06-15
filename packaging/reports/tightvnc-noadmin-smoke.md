@@ -3,7 +3,7 @@
 - Contract: `tightvnc`
 - Track: `conductor/tracks/tightvnc_20260613/`
 - Last reviewed: 2026-06-14
-- Runtime validation: `deferred`
+- Runtime validation: `not-required`
 
 | Gate | Status | Evidence |
 | --- | --- | --- |

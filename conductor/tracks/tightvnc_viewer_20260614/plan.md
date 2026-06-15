@@ -15,7 +15,7 @@
 
 ## Phase 3: Exit
 
-- [x] Task: Decide whether Chocolatey can use a package-tools extraction-only route.
+- [x] Task: Add Chocolatey package source files under `packaging/chocolatey/tightvnc-viewer/` using viewer-only extraction.
 - [x] Task: Manual verification gate recorded as deferred/not-run; see runtime status in `packaging/reports/sota-readiness.md`.
 
 Decision log:
@@ -26,3 +26,5 @@ Execution status:
 - Runtime matrix status: `passed` for user-scope Scoop install/link/binary-presence validation.
 
 Implementation closure (2026-06-15): local Scoop install validation passed for the manifest, expected binaries were present under the user Scoop app directory, and no matching service was observed. Evidence is recorded in the contract hardening and no-admin smoke reports.
+
+Chocolatey closure (2026-06-15): package source added with 7-Zip MSI extraction, copies only `tvnviewer.exe`, and installs viewer shims only; isolated Chocolatey install, launch, and uninstall proof remains a separate hardening gate.

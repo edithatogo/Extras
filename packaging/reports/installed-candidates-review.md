@@ -19,7 +19,7 @@ Generated: 2026-06-15T08:58:43.7141757Z
 | Linear | high-signal | candidate | - | - | - |
 | NoMachine Enterprise Client | high-signal | deferred | nomachine-enterprise-client | - | - |
 | Power Platform ToolBox | high-signal | candidate | - | - | - |
-| TightVNC Full Bundle | high-signal | deferred | - | - | - |
+| TightVNC Full Bundle | high-signal | covered | - | - | - |
 | XrmToolBox | high-signal | candidate | - | - | - |
 | Anaconda | requested | covered | - | - | - |
 | Antigravity | requested | covered | - | - | - |

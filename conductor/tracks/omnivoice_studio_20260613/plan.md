@@ -33,7 +33,7 @@ This track converts OmniVoice Studio into a hardened no-admin candidate with exp
 ## Phase 4: Chocolatey Feasibility and Exit
 
 - [x] Task: Document Chocolatey portable/user-writable strategy and known blockers in contract.
-- [x] Task: Add explicit out-of-scope status for Chocolatey package files in this repository.
+- [x] Task: Add Chocolatey package source files under `packaging/chocolatey/omnivoice-studio/`.
 - [x] Task: Manual verification gate recorded as deferred/not-run; see runtime status in `packaging/reports/sota-readiness.md`.
 - [x] Task: Finalize this track to terminal candidate state with safety and feasibility evidence consistent across contract and spec; runtime smoke remains deferred.
 
@@ -47,3 +47,5 @@ Execution status:
 - Blocker: this environment did not run isolated install/launch/uninstall validation; track is implemented for the Scoop manifest; GUI launch and uninstall cleanup remain separate follow-up evidence if needed.
 
 Implementation closure (2026-06-15): local Scoop install validation passed for the manifest, expected binaries were present under the user Scoop app directory, and no matching service was observed. Evidence is recorded in the contract hardening and no-admin smoke reports.
+
+Chocolatey closure (2026-06-15): package source added with 7-Zip MSI extraction into `tools\app` and a shim for `omnivoice-studio.exe`; isolated Chocolatey install, launch, and uninstall proof remains a separate hardening gate.

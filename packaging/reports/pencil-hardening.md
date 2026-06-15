@@ -3,8 +3,8 @@
 - Contract: `pencil`
 - Track: `conductor/tracks/pencil_20260615/`
 - Last reviewed: 2026-06-15
-- Readiness state: `deferred`
-- Runtime validation: `deferred`
+- Readiness state: `covered`
+- Runtime validation: `not-required`
 
 ## Source Evidence
 - no explicit source entries; see installer evidence and duplicate lookup terms
@@ -28,4 +28,4 @@ Use the upstream package-manager route; do not duplicate package logic locally u
 - Chocolatey: `deferred` - Package source must use SHA256 only and extract the NSIS app payload with 7-Zip into $toolsDir.
 
 ## Decision
-Upstream Scoop remains covered. Repo-local Chocolatey packaging is deferred because the review rejected SHA1 and a complete trusted SHA256 artifact has not yet been verified in this pass.
+Upstream Scoop remains covered and is not blocked by Chocolatey deferral. Repo-local Chocolatey packaging remains deferred because the review rejected SHA1 and a complete trusted SHA256 artifact has not yet been verified in this pass.

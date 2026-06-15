@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>voicebox</id>
+    <version>0.5.0</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>Voicebox</title>
+    <authors>Voicebox contributors</authors>
+    <projectUrl>https://voicebox.sh</projectUrl>
+    <licenseUrl>https://github.com/jamiepine/voicebox/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Local-first open-source voice cloning and speech studio.</description>
+    <summary>Voicebox no-admin extraction-only package candidate.</summary>
+    <tags>voicebox voice cloning speech mcp no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

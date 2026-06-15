@@ -31,7 +31,7 @@ This track hardens Voicebox to a verified no-admin state with explicit blockers 
 
 ## Phase 4: Chocolatey Feasibility and Exit
 
-- [x] Task: Document Chocolatey feasible/infeasible paths in contract and note no package files here.
+- [x] Task: Document Chocolatey feasible/infeasible paths in contract and add package files under `packaging/chocolatey/voicebox/`.
 - [x] Task: Manual verification gate recorded as deferred/not-run; see runtime status in `packaging/reports/sota-readiness.md`.
 - [x] Task: Finalize track to terminal candidate state with static evidence attached and runtime smoke explicitly deferred.
 
@@ -45,3 +45,5 @@ Execution status:
 - Blocker: this environment did not run isolated install/launch/uninstall validation; track is implemented for the Scoop manifest; GUI launch and uninstall cleanup remain separate follow-up evidence if needed.
 
 Implementation closure (2026-06-15): local Scoop install validation passed for the manifest, expected binaries were present under the user Scoop app directory, and no matching service was observed. Evidence is recorded in the contract hardening and no-admin smoke reports.
+
+Chocolatey closure (2026-06-15): package source added with 7-Zip MSI extraction into `tools\app` and shims for `voicebox`, `voicebox-server`, and `voicebox-mcp`; isolated Chocolatey install, launch, and uninstall proof remains a separate hardening gate.

@@ -19,8 +19,8 @@
 
 Decision log:
 - Duplicate lookup status: local Scoop route exists; duplicate collisions are not currently observed.
-- Policy state: implemented route kept with runtime service/driver verification pending.
+- Policy state: Scoop full-bundle route is kept as covered/available despite Chocolatey deferral; hardened no-admin Android mirroring remains assigned to `tightvnc-viewer`.
 
 Execution status:
-- Runtime matrix status: `candidate-requires-runtime-validation` in `packaging/reports/sota-readiness.md`.
-- Blocker: this environment did not run isolated runtime validation; service/driver side-effects remain to verify.
+- Runtime matrix status: `covered` in `packaging/reports/sota-readiness.md` for the full-bundle Scoop route.
+- Blocker: service/server behavior is not the hardened route; use `tightvnc-viewer` for no-admin desktop-client completion.

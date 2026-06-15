@@ -11,4 +11,4 @@ Classify and harden the Scoop/Chocolatey posture for Pencil under the repository
 
 ## Status
 - **Status:** completed
-- **Decision:** Covered by upstream Scoop for Evolus Pencil; repo-local Chocolatey packaging is deferred until SHA256 and isolated no-admin proof are complete.
+- **Decision:** Covered by upstream Scoop for Evolus Pencil; repo-local Chocolatey packaging is deferred until SHA256 and isolated no-admin proof are complete. Chocolatey deferral does not block the Scoop route.

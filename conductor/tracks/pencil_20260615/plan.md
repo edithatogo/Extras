@@ -25,4 +25,4 @@ Execution status:
 - [x] Kept Scoop route covered by upstream `pencil`.
 - [x] Deferred repo-local Chocolatey package source after review rejected SHA1 checksum evidence.
 - [x] Removed unverified local Chocolatey package source from this branch.
-- Runtime closure: Chocolatey remains deferred until SHA256 and isolated extraction/launch/uninstall proof are complete.
+- Runtime closure: Scoop remains covered and does not require repo-local duplication; Chocolatey remains deferred until SHA256 and isolated extraction/launch/uninstall proof are complete.

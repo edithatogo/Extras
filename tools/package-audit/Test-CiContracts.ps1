@@ -15,6 +15,20 @@ foreach ($file in $workflowFiles) {
         $failures.Add("$($file.Name): CI workflow must declare least-privilege contents: read permissions")
     }
 
+    if ($file.Name -eq 'ci.yml') {
+        foreach ($requiredScript in @(
+            'Test-PackageContracts.ps1',
+            'Test-SubmissionReadiness.ps1',
+            'Test-NoAdminPackageSources.ps1',
+            'Test-ChocolateyPackages.ps1',
+            'Test-CiContracts.ps1'
+        )) {
+            if ($content -notmatch [regex]::Escape($requiredScript)) {
+                $failures.Add("$($file.Name): CI workflow must run $requiredScript")
+            }
+        }
+    }
+
     foreach ($match in [regex]::Matches($content, 'uses:\s*([^\s#]+)')) {
         $uses = $match.Groups[1].Value
         if ($uses -match '^(actions/|potatoqualitee/)' -and $uses -notmatch '@[a-f0-9]{40}$') {

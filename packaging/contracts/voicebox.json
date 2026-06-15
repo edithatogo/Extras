@@ -26,7 +26,8 @@
                                        "target directory ProgramFiles64Folder\\Voicebox",
                                        "launch target voicebox.exe",
                                        "contains voicebox-server.exe and voicebox-mcp.exe",
-                                       "custom action downloads and invokes Microsoft Edge WebView2 installer"
+                                       "custom action downloads and invokes Microsoft Edge WebView2 installer",
+                                       "Chocolatey package source added under packaging/chocolatey/voicebox with 7-Zip MSI extraction only."
                                    ]
                   },
     "no_admin":  {
@@ -46,9 +47,9 @@
                                   "no_admin_strategy":  "Extract MSI payload; shortcut voicebox.exe; evaluate server and MCP binaries as optional bins."
                               },
                     "chocolatey":  {
-                                       "status":  "candidate",
+                                       "status":  "implemented",
                                        "package_id":  "voicebox",
-                                       "no_admin_strategy":  "Portable extraction under $toolsDir only; block MSI execution."
+                                       "no_admin_strategy":  "Download official GitHub release MSI, extract with 7-Zip into $toolsDir\\app, and install voicebox, voicebox-server, and voicebox-mcp shims only."
                                    }
                 },
     "duplicate_lookup":  {
@@ -74,6 +75,6 @@
                       "hardening_report":  "packaging/reports/voicebox-hardening.md",
                       "smoke_report":  "packaging/reports/voicebox-noadmin-smoke.md",
                       "last_reviewed":  "2026-06-15",
-                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey package source is implemented with extraction-only install logic; isolated Chocolatey runtime proof remains pending."
                   }
 }

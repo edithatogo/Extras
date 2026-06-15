@@ -13,10 +13,12 @@ flowchart TD
     I --> J[Block if installer needs machine scope]
     J --> K{Implemented?}
     K -- yes --> N[Add .nuspec and tools/chocolateyinstall.ps1]
+    N --> P[Test-NoAdminPackageSources.ps1]
+    P --> Q[Test-ChocolateyPackages.ps1]
     K -- no --> O[Chocolatey submission note only]
     H -- no --> L[No Chocolatey submission]
     F --> M[Test-SubmissionReadiness.ps1]
-    N --> M
+    Q --> M
     O --> M
 ```
 
@@ -24,6 +26,8 @@ flowchart TD
 
 - `tools/package-audit/Test-PackageContracts.ps1`
 - `tools/package-audit/Test-SubmissionReadiness.ps1`
+- `tools/package-audit/Test-NoAdminPackageSources.ps1`
+- `tools/package-audit/Test-ChocolateyPackages.ps1`
 - `tools/package-audit/Test-CiContracts.ps1`
 - `bin/Package-Factory.Tests.ps1`
 - `git diff --check`

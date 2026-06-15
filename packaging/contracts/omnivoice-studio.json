@@ -25,7 +25,8 @@
                                        "ALLUSERS=1",
                                        "extracted payload directory PFiles\\OmniVoice Studio",
                                        "launch target omnivoice-studio.exe",
-                                       "custom action downloads and invokes Microsoft Edge WebView2 installer"
+                                       "custom action downloads and invokes Microsoft Edge WebView2 installer",
+                                       "Chocolatey package source added under packaging/chocolatey/omnivoice-studio with 7-Zip MSI extraction only."
                                    ]
                   },
     "no_admin":  {
@@ -45,9 +46,9 @@
                                   "no_admin_strategy":  "Extract MSI payload into PFiles\\OmniVoice Studio; launch PFiles\\OmniVoice Studio\\omnivoice-studio.exe."
                               },
                     "chocolatey":  {
-                                       "status":  "candidate",
+                                       "status":  "implemented",
                                        "package_id":  "omnivoice-studio",
-                                       "no_admin_strategy":  "Portable extraction under $toolsDir only; block MSI execution."
+                                       "no_admin_strategy":  "Download official GitHub release MSI, extract with 7-Zip into $toolsDir\\app, and install a shim only."
                                    }
                 },
     "duplicate_lookup":  {
@@ -75,6 +76,6 @@
                       "hardening_report":  "packaging/reports/omnivoice-studio-hardening.md",
                       "smoke_report":  "packaging/reports/omnivoice-studio-noadmin-smoke.md",
                       "last_reviewed":  "2026-06-15",
-                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey package source is implemented with extraction-only install logic; isolated Chocolatey runtime proof remains pending."
                   }
 }
