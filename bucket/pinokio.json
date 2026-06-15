@@ -1,0 +1,41 @@
+{
+    "version": "7.2.6",
+    "description": "AI browser to launch AI apps and workflows from one interface.",
+    "homepage": "https://pinokio.co",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/pinokiocomputer/pinokio/blob/master/LICENSE"
+    },
+    "notes": [
+        "No-admin install path uses NSIS payload extraction only; installer execution is skipped.",
+        "If startup launches a blank window, install Microsoft Edge WebView2 runtime from extras/webview2 first."
+    ],
+    "depends": "extras/webview2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/pinokiocomputer/pinokio/releases/download/v7.2.6/Pinokio.exe#/dl.7z",
+            "hash": "84cfb1d47fdc05f5b7968e7b7751243a24ae4ef97b0f5daf9f4bf6e5b1f93db4",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\" -Removal",
+                "Remove-Item \"$dir\\`$*\", \"$dir\\$fname\" -Recurse -Force -ErrorAction SilentlyContinue"
+            ]
+        }
+    },
+    "bin": "Pinokio.exe",
+    "shortcuts": [
+        [
+            "Pinokio.exe",
+            "Pinokio"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/pinokiocomputer/pinokio"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/pinokiocomputer/pinokio/releases/download/v$version/Pinokio.exe#/dl.7z"
+            }
+        }
+    }
+}

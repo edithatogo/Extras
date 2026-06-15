@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "id": "droidvnc-ng",
+  "name": "droidVNC-NG",
+  "version": "unknown",
+  "priority": "requested",
+  "candidate_status": "blocked",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "droidVNC-NG is an Android-side VNC server app (APK distribution).",
+      "This repo currently tracks desktop packaging; no native desktop installer exists in the upstream project."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Block as non-desktop package in this factory lane; provide only tracking + duplicate lookup evidence and defer until a verifiable desktop-side alternative exists.",
+    "hard_blockers": [
+      "mobile APK-only artifact",
+      "no standalone Windows installer",
+      "requires Android-side permissions and screen-access service"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "blocked",
+      "expected_manifest": null,
+      "no_admin_strategy": "No Scoop-ready desktop installer; maintain as policy decision not to package."
+    },
+    "chocolatey": {
+      "status": "blocked",
+      "package_id": "droidvnc-ng",
+      "no_admin_strategy": "No verified Chocolatey implementation path without elevating through unsupported mobile provisioning."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "droidvnc-ng",
+      "droidvnc"
+    ],
+    "chocolatey_terms": [
+      "droidvnc-ng",
+      "droidvnc"
+    ],
+    "winget_terms": [
+      "droidvnc-ng"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/droidvnc_ng_20260613/",
+  "readiness": {
+    "state": "blocked",
+    "runtime_validation": "blocked",
+    "hardening_report": "packaging/reports/droidvnc-ng-hardening.md",
+    "smoke_report": "packaging/reports/droidvnc-ng-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Blocked as a mobile APK/server workflow; desktop packaging lane is TightVNC viewer/client coverage only."
+  }
+}

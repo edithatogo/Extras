@@ -1,0 +1,79 @@
+{
+    "schema_version":  "1.0",
+    "id":  "voicebox",
+    "name":  "Voicebox",
+    "version":  "0.5.0",
+    "priority":  "requested",
+    "candidate_status":  "candidate",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "sources":  [
+                    {
+                        "type":  "public-release",
+                        "path":  "https://github.com/jamiepine/voicebox/releases/download/v0.5.0/Voicebox_0.5.0_x64_en-US.msi",
+                        "sha256":  "6242007DCEE2C7127B687873C0D97D02958D6D5B3BB304DCA70439ECF595CDD0",
+                        "signature":  "NotSigned",
+                        "status":  "manifest-source"
+                    }
+                ],
+    "installer":  {
+                      "type":  "msi",
+                      "evidence":  [
+                                       "MSI ProductName Voicebox",
+                                       "ALLUSERS=1",
+                                       "target directory ProgramFiles64Folder\\Voicebox",
+                                       "launch target voicebox.exe",
+                                       "contains voicebox-server.exe and voicebox-mcp.exe",
+                                       "custom action downloads and invokes Microsoft Edge WebView2 installer"
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Extract MSI/CAB payload into a user-writable package directory; never execute MSI custom actions.",
+                     "hard_blockers":  [
+                                           "msiexec /i",
+                                           "ALLUSERS=1 execution",
+                                           "WebView2 machine bootstrap",
+                                           "Program Files write"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "implemented",
+                                  "expected_manifest":  "bucket/voicebox.json",
+                                  "no_admin_strategy":  "Extract MSI payload; shortcut voicebox.exe; evaluate server and MCP binaries as optional bins."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "voicebox",
+                                       "no_admin_strategy":  "Portable extraction under $toolsDir only; block MSI execution."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "voicebox"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "voicebox"
+                                                  ],
+                             "winget_terms":  [
+                                                  "Voicebox"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/voicebox_20260613/",
+    "readiness":  {
+                      "state":  "implemented",
+                      "runtime_validation":  "passed",
+                      "hardening_report":  "packaging/reports/voicebox-hardening.md",
+                      "smoke_report":  "packaging/reports/voicebox-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                  }
+}

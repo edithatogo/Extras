@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "nomachine-enterprise-client",
+    "name":  "NoMachine Enterprise Client",
+    "version":  "9.6.3",
+    "priority":  "high-signal",
+    "candidate_status":  "deferred",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "nsis",
+                      "evidence":  [
+                                       "Previous Scoop manifest route used a silent NSIS execution with /VERYSILENT and /DIR=$dir",
+                                       "Direct installer execution is deferred until a pure extraction route is proven",
+                                       "Client-only components only; server-side components are out of scope"
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Use only a proven extraction route into a user-writable package directory. Direct installer execution is blocked for no-admin submission.",
+                     "hard_blockers":  [
+                                           "UAC elevation",
+                                           "machine-wide install service registration",
+                                           "HKLM writes",
+                                           "Program Files write"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "deferred",
+                                  "no_admin_strategy":  "Prove installer extraction without execution before adding a Scoop manifest."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "nomachine-enterprise-client",
+                                       "no_admin_strategy":  "Portable extraction or user-writable tools-only packaging only; machine-scope silent install is blocked."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "nomachine",
+                                                 "NoMachine",
+                                                 "nomachine-enterprise-client"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "nomachine",
+                                                      "nomachine-enterprise-client"
+                                                  ],
+                             "winget_terms":  [
+                                                  "NoMachine Enterprise Client"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/nomachine_20260604/",
+    "readiness":  {
+                      "state":  "deferred",
+                      "runtime_validation":  "deferred",
+                      "hardening_report":  "packaging/reports/nomachine-enterprise-client-hardening.md",
+                      "smoke_report":  "packaging/reports/nomachine-enterprise-client-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Previous local smoke showed a user-directory install and no matching service, but the route executed the vendor installer and created an HKCU uninstall entry pointing at ProgramData. Submission is deferred until a non-executing extraction strategy is proven."
+                  }
+}

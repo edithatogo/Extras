@@ -1,0 +1,8 @@
+{
+    "track_id":  "scrcpy_20260613",
+    "type":  "feature",
+    "status":  "completed",
+    "created_at":  "2026-06-13T00:00:00Z",
+    "updated_at":  "2026-06-15T00:00:00Z",
+    "description":  "Close the SOTA gap for SCRCPY mirroring package and validate no-admin readiness."
+}

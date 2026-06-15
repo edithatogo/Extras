@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "tightvnc",
+  "name": "TightVNC Full Bundle",
+  "version": "2.8.87",
+  "priority": "high-signal",
+  "candidate_status": "deferred",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "msi",
+    "evidence": [
+      "Windows VNC client manifest already exists as `bucket/tightvnc.json`.",
+      "Scoop extraction model is used from public upstream MSI URLs; no installer execution is required in this repo.",
+      "Full bundle exposes tvnserver.exe; no-admin hardened path is split to tightvnc-viewer."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Defer full-bundle hardening; use viewer-only extraction route unless server/service behavior is explicitly required and validated.",
+    "hard_blockers": [
+      "runtime services started by the vendor installer may still occur for optional server modes",
+      "admin-required driver or helper registration in selected feature sets",
+      "network access prompts during first run"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "deferred",
+      "expected_manifest": "bucket/tightvnc.json",
+      "no_admin_strategy": "Existing bundle is not the hardened route because it exposes tvnserver.exe; use tightvnc-viewer for the no-admin droidVNC-NG workflow."
+    },
+    "chocolatey": {
+      "status": "deferred",
+      "package_id": "tightvnc",
+      "no_admin_strategy": "Package remains deferred until a reproducible user-writable packaging approach is validated."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "tightvnc",
+      "tvnviewer"
+    ],
+    "chocolatey_terms": [
+      "tightvnc",
+      "glavsoft-tightvnc"
+    ],
+    "winget_terms": [
+      "GlavSoft.TightVNC",
+      "TightVNC"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/tightvnc_20260613/",
+  "readiness": {
+    "state": "deferred",
+    "runtime_validation": "deferred",
+    "hardening_report": "packaging/reports/tightvnc-hardening.md",
+    "smoke_report": "packaging/reports/tightvnc-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Full TightVNC bundle is deferred from hardened completion; viewer-only package carries the no-admin desktop-client route."
+  }
+}

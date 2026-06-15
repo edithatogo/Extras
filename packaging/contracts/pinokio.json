@@ -1,0 +1,76 @@
+{
+    "schema_version":  "1.0",
+    "id":  "pinokio",
+    "name":  "Pinokio",
+    "version":  "7.2.6",
+    "priority":  "requested",
+    "candidate_status":  "candidate",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "sources":  [
+                    {
+                        "type":  "local-evidence",
+                        "path":  "C:\\Users\\60217257\\OneDrive - NSW Health Department\\Downloads\\Pinokio.exe",
+                        "sha256":  "84CFB1D47FDC05F5B7968E7B7751243A24AE4EF97B0F5DAF9F4BF6E5B1F93DB4",
+                        "signature":  "Valid; SignPath Foundation",
+                        "status":  "evidence-only"
+                    }
+                ],
+    "installer":  {
+                      "type":  "nsis",
+                      "evidence":  [
+                                       "NSIS-3 Unicode installer",
+                                       "contains $PLUGINSDIR\\app-64.7z",
+                                       "inner archive contains Pinokio.exe"
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Extract the NSIS payload and expand app-64.7z into the Scoop app directory; do not execute the installer.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "machine-wide install",
+                                           "Program Files write",
+                                           "HKLM write"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "implemented",
+                                  "expected_manifest":  "bucket/pinokio.json",
+                                  "no_admin_strategy":  "Use #/dl.7z and Expand-7zipArchive on $PLUGINSDIR\\app-64.7z."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "pinokio",
+                                       "no_admin_strategy":  "Portable package under $toolsDir only; do not run installer."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "pinokio"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "pinokio"
+                                                  ],
+                             "winget_terms":  [
+                                                  "Pinokio"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/pinokio_20260613/",
+    "readiness":  {
+                      "state":  "implemented",
+                      "runtime_validation":  "passed",
+                      "hardening_report":  "packaging/reports/pinokio-hardening.md",
+                      "smoke_report":  "packaging/reports/pinokio-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                  }
+}

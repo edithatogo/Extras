@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "id": "android-studio",
+  "name": "Android Studio",
+  "version": "2025.3.3.6",
+  "priority": "high-signal",
+  "candidate_status": "covered",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "zip",
+    "evidence": [
+      "Bucket manifest already exists at `bucket/android-studio.json`.",
+      "Current manifest uses IDE ZIP extraction to a user-writable folder."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Keep ZIP-only manifest flow; avoid installer mode so Android Studio runs as user-level files under Scoop.",
+    "hard_blockers": [
+      "elevated installation workflow",
+      "SDK path rewriting to HKLM"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "implemented",
+      "expected_manifest": "bucket/android-studio.json",
+      "no_admin_strategy": "Scoop zip extraction into app directory; verify no `Start-Process` installer execution path."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "androidstudio",
+      "no_admin_strategy": "Use portable or user-scope extraction only; block package route if installer insists on admin context."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "android studio",
+      "android-studio",
+      "androidstudio"
+    ],
+    "chocolatey_terms": [
+      "androidstudio",
+      "android-studio"
+    ],
+    "winget_terms": [
+      "Google.AndroidStudio",
+      "Android Studio"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/android_studio_20260613/",
+  "readiness": {
+    "state": "covered",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/android-studio-hardening.md",
+    "smoke_report": "packaging/reports/android-studio-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}
