@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "scrcpy-plus",
+  "name": "SCRCPY+",
+  "version": "unknown",
+  "priority": "requested",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Article method references Frontesque.scrcpy+ package and GitHub release artifacts as a GUI wrapper around SCRCPY.",
+      "No Scoop manifest exists yet in this repository."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Defer full implementation until install method and reproducible public artifact are confirmed; do not execute any machine-scope installer path by default.",
+    "hard_blockers": [
+      "missing manifest in this repo",
+      "insufficient public artifact fingerprinting for hash/autoupdate alignment",
+      "installer behavior not yet measured for UAC risk"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "blocked",
+      "expected_manifest": null,
+      "no_admin_strategy": "No confirmed Scoop-native manifest/package route yet."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "scrcpy-plus",
+      "no_admin_strategy": "Evaluate the existing Chocolatey package route for non-admin install; record fallback if it depends on machine-wide bootstrap."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "scrcpy+",
+      "scrcpy plus"
+    ],
+    "chocolatey_terms": [
+      "scrcpy+",
+      "scrcpy-plus",
+      "frontesque.scrcpy+"
+    ],
+    "winget_terms": [
+      "scrcpy-plus",
+      "SCRCPY+"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/scrcpy_plus_20260613/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/scrcpy-plus-hardening.md",
+    "smoke_report": "packaging/reports/scrcpy-plus-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}

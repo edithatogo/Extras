@@ -16,7 +16,7 @@
         },
         "32bit": {
             "url": "https://boinc.berkeley.edu/dl/boinc_7.16.3_windows_intelx86.exe#/dl.exe",
-            "hash": ""
+            "hash": "83c1cd6d0a90a170aca746b12a42b29377e4b419c2b13b1b2bf6dc28dd91e79d"
         }
     },
     "installer": {

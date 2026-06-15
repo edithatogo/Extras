@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "github-copilot-desktop",
+    "name":  "GitHub Copilot Desktop",
+    "version":  "0.2.30",
+    "priority":  "requested",
+    "candidate_status":  "deferred",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "unknown",
+                      "evidence":  [
+                                       "Local registry shows GitHub Copilot 0.2.30 current-user install under AppData\\\\Local\\\\Programs\\\\GitHub Copilot.",
+                                       "Local Scoop buckets only showed unrelated aws-copilot and copilot-cli."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Deferred candidate; require stable public source, extraction strategy, and isolated no-admin runtime smoke before implementation.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "deferred",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No confirmed Scoop manifest for GitHub Copilot Desktop; defer until official stable source URL and extraction strategy are known."
+                              },
+                    "chocolatey":  {
+                                       "status":  "deferred",
+                                       "package_id":  "github-copilot-desktop",
+                                       "no_admin_strategy":  "No confirmed Chocolatey package route for GitHub Copilot Desktop; portable package only if official source can be resolved."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "github-copilot-desktop",
+                                                 "GitHub Copilot Desktop"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "github-copilot-desktop",
+                                                      "GitHub Copilot Desktop"
+                                                  ],
+                             "winget_terms":  [
+                                                  "GitHub Copilot Desktop"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/github_copilot_desktop_20260615/",
+    "readiness":  {
+                      "state":  "deferred",
+                      "runtime_validation":  "deferred",
+                      "hardening_report":  "packaging/reports/github-copilot-desktop-hardening.md",
+                      "smoke_report":  "packaging/reports/github-copilot-desktop-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Deferred until an official stable source and user-writable no-admin install strategy are available."
+                  }
+}

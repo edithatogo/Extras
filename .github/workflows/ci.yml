@@ -5,6 +5,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
   test:
     name: Test
@@ -36,3 +39,27 @@ jobs:
         run: |
           $env:SCOOP_HOME="$(Convert-Path '.\scoop_core')"
           .\my_bucket\bin\test.ps1
+      - name: Validate package contracts
+        run: |
+          .\my_bucket\tools\package-audit\Test-PackageContracts.ps1
+      - name: Validate package submission readiness
+        run: |
+          .\my_bucket\tools\package-audit\Test-SubmissionReadiness.ps1
+      - name: Validate CI contracts
+        run: |
+          .\my_bucket\tools\package-audit\Test-CiContracts.ps1
+      - name: Run package factory tests
+        run: |
+          $pester = Get-Module Pester -ListAvailable | Sort-Object Version -Descending | Select-Object -First 1
+          if ($pester.Version.Major -ge 5) {
+            Invoke-Pester .\my_bucket\bin\Package-Factory.Tests.ps1 -Output Detailed
+          } else {
+            Invoke-Pester .\my_bucket\bin\Package-Factory.Tests.ps1
+          }
+      - name: Generate offline package audit reports
+        run: |
+          .\my_bucket\tools\package-audit\Find-Existing.ps1
+          .\my_bucket\tools\package-audit\Build-ContractEvidenceReports.ps1
+          .\my_bucket\tools\package-audit\New-CandidateReport.ps1
+          .\my_bucket\tools\package-audit\Find-InstalledCandidates.ps1
+          .\my_bucket\tools\package-audit\Build-SotaReadinessReport.ps1

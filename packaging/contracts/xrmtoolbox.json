@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "id": "xrmtoolbox",
+  "name": "XrmToolBox",
+  "version": "1.2025.10.74",
+  "priority": "high-signal",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Installed via WinGet under AppData\\Local\\Microsoft\\WinGet\\Packages"
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Prefer portable or user-writable install layout and block machine-wide installer behavior.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "candidate",
+      "expected_manifest": "bucket/xrmtoolbox.json",
+      "no_admin_strategy": "Probe upstream archive or WinGet source for extractable payload."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "xrmtoolbox",
+      "no_admin_strategy": "Portable package only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "xrmtoolbox"
+    ],
+    "chocolatey_terms": [
+      "xrmtoolbox"
+    ],
+    "winget_terms": [
+      "XrmToolBox"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/installed_candidates_20260614/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/xrmtoolbox-hardening.md",
+    "smoke_report": "packaging/reports/xrmtoolbox-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}

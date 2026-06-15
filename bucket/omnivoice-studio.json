@@ -1,0 +1,39 @@
+{
+    "version": "0.3.5",
+    "description": "Open-source, local-first desktop voice cloning and dubbing studio.",
+    "homepage": "https://github.com/debpalash/OmniVoice-Studio",
+    "license": {
+        "identifier": "AGPL-3.0-only",
+        "url": "https://github.com/debpalash/OmniVoice-Studio/blob/main/LICENSE"
+    },
+    "notes": [
+        "No-admin route uses MSI payload extraction only and avoids running installer custom actions.",
+        "This app expects Microsoft Edge WebView2 runtime; install `extras/webview2` and rely on Scoop's fixed runtime.",
+        "If the app starts with a blank window, confirm WEBVIEW2 runtime is detected via the Scoop env export."
+    ],
+    "depends": "extras/webview2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/debpalash/OmniVoice-Studio/releases/download/v0.3.5/OmniVoice.Studio_0.3.5_x64_en-US.msi",
+            "hash": "39529182a1c61a561fffc82c82c5886b8e4c640bf153c6134d9570099192e906"
+        }
+    },
+    "extract_dir": "PFiles\\OmniVoice Studio",
+    "bin": "omnivoice-studio.exe",
+    "shortcuts": [
+        [
+            "omnivoice-studio.exe",
+            "OmniVoice Studio"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/debpalash/OmniVoice-Studio"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/debpalash/OmniVoice-Studio/releases/download/v$version/OmniVoice.Studio_$version_x64_en-US.msi"
+            }
+        }
+    }
+}

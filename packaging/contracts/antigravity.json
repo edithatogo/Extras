@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "antigravity",
+  "name": "Antigravity",
+  "version": "2.1.4",
+  "priority": "requested",
+  "candidate_status": "covered",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "inno",
+    "evidence": [
+      "Chocolatey community package antigravity 2.1.4 is Google Antigravity but uses Install-ChocolateyPackage to execute the installer.",
+      "Local Chocolatey package source added under packaging/chocolatey/antigravity with the same official 2.1.4 artifact and an extraction-first no-admin strategy."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Use the upstream package-manager route; do not duplicate package logic locally unless upstream route fails no-admin policy.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write",
+      "service or driver registration",
+      "unofficial or ambiguous source identity"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "covered",
+      "expected_manifest": null,
+      "no_admin_strategy": "Use upstream Scoop extras/antigravity, extras/antigravity-ide, or main/antigravity-cli as appropriate; avoid duplicate local manifests."
+    },
+    "chocolatey": {
+      "status": "implemented",
+      "package_id": "antigravity",
+      "no_admin_strategy": "Chocolatey package source downloads the official Google Antigravity 2.1.4 artifact and attempts portable extraction into $toolsDir; community package exists but executes the installer."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "antigravity",
+      "Antigravity"
+    ],
+    "chocolatey_terms": [
+      "antigravity",
+      "Antigravity"
+    ],
+    "winget_terms": [
+      "Antigravity"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/antigravity_20260615/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/antigravity-hardening.md",
+    "smoke_report": "packaging/reports/antigravity-noadmin-smoke.md",
+    "last_reviewed": "2026-06-15",
+    "decision": "Chocolatey package identity is covered by the community feed, but the community install script executes the installer. Repo-local extraction-first package source added, pending extraction and runtime proof."
+  }
+}
