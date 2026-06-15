@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>anaconda3</id>
+    <version>2025.12.2</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>Anaconda3</title>
+    <authors>Anaconda, Inc.</authors>
+    <projectUrl>https://www.anaconda.com/</projectUrl>
+    <licenseUrl>https://legal.anaconda.com/policies/en/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Python distribution for data science, installed in current-user/no-registry mode.</description>
+    <summary>Anaconda3 no-admin package candidate.</summary>
+    <tags>anaconda python conda data-science no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

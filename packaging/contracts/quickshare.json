@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "id": "quickshare",
+  "name": "Quick Share",
+  "version": "1.0.2527.0",
+  "priority": "requested",
+  "candidate_status": "blocked",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "msi",
+    "evidence": [
+      "Current Scoop manifest source is Google better_together.msi from dl.google.com.",
+      "Manifest installs to %ProgramFiles%\\Google\\Quick Share.",
+      "Installer path is machine-scope and not a proven extraction-only no-admin route."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Block no-admin factory submission unless a pure extraction route is proven that avoids MSI execution, Program Files writes, HKLM writes, services, drivers, and common Start Menu writes.",
+    "hard_blockers": [
+      "machine-scope MSI execution",
+      "Program Files write",
+      "HKLM write",
+      "Common Start Menu write",
+      "service or driver registration"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "blocked",
+      "no_admin_strategy": "No Scoop manifest is included for this no-admin factory route; submission is blocked until extraction-only install is proven."
+    },
+    "chocolatey": {
+      "status": "blocked",
+      "package_id": "quickshare",
+      "no_admin_strategy": "Do not create a Chocolatey package that executes the machine-scope MSI. Only a tools-dir extraction package is acceptable."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "quickshare",
+      "Quick Share",
+      "google quick share"
+    ],
+    "chocolatey_terms": [
+      "quickshare",
+      "quick-share",
+      "google-quick-share"
+    ],
+    "winget_terms": [
+      "Google.QuickShare",
+      "Quick Share"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/quickshare_20260615/",
+  "readiness": {
+    "state": "blocked",
+    "runtime_validation": "blocked",
+    "hardening_report": "packaging/reports/quickshare-hardening.md",
+    "smoke_report": "packaging/reports/quickshare-noadmin-smoke.md",
+    "last_reviewed": "2026-06-15",
+    "decision": "Quick Share is tracked as requested, but the available Google MSI is machine-scope and not suitable for the no-admin package factory. Both Scoop and Chocolatey no-admin submissions are blocked until a non-executing extraction strategy is proven."
+  }
+}

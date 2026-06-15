@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "endnote",
+    "name":  "EndNote",
+    "version":  "2025",
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "msi",
+                      "evidence":  [
+                                       "Local registry shows EndNote 2025 installed under Program Files (x86).",
+                                       "No local Scoop manifest found."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No local Scoop route found; commercial/licensed installer is machine-scope in current local install."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  "endnote",
+                                       "no_admin_strategy":  "No confirmed public Chocolatey package route; do not package licensed installer without entitlement and no-admin evidence."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "endnote",
+                                                 "EndNote"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "endnote",
+                                                      "EndNote"
+                                                  ],
+                             "winget_terms":  [
+                                                  "EndNote"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/endnote_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/endnote-hardening.md",
+                      "smoke_report":  "packaging/reports/endnote-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked for no-admin package-manager treatment due licensing and machine-scope installer posture."
+                  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "id": "linear",
+  "name": "Linear",
+  "version": null,
+  "priority": "high-signal",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "AppData\\Local\\Programs contains Linear"
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Prefer Electron extraction or user-writable install path.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "candidate",
+      "expected_manifest": "bucket/linear.json",
+      "no_admin_strategy": "Probe upstream installer for NSIS/Electron extraction."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "linear",
+      "no_admin_strategy": "Portable package only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "linear"
+    ],
+    "chocolatey_terms": [
+      "linear"
+    ],
+    "winget_terms": [
+      "Linear"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/installed_candidates_20260614/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/linear-hardening.md",
+    "smoke_report": "packaging/reports/linear-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}

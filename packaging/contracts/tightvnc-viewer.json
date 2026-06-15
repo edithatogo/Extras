@@ -1,0 +1,74 @@
+{
+    "schema_version":  "1.0",
+    "id":  "tightvnc-viewer",
+    "name":  "TightVNC Viewer",
+    "version":  "2.8.87",
+    "priority":  "requested",
+    "candidate_status":  "candidate",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "msi",
+                      "evidence":  [
+                                       "Article workflow uses a desktop VNC client to connect to droidVNC-NG running on Android.",
+                                       "The upstream TightVNC MSI can be expanded by Scoop without executing MSI custom actions.",
+                                       "The viewer-only manifest exposes tvnviewer.exe and does not expose tvnserver.exe."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Extract the MSI payload into the Scoop app directory and expose only the viewer binary; do not execute msiexec and do not expose the server/service binary.",
+                     "hard_blockers":  [
+                                           "msiexec /i",
+                                           "server service registration",
+                                           "HKLM write",
+                                           "Program Files write",
+                                           "UAC prompt"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "implemented",
+                                  "expected_manifest":  "bucket/tightvnc-viewer.json",
+                                  "no_admin_strategy":  "Scoop MSI extraction into app directory with only tvnviewer.exe exposed."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "tightvnc-viewer",
+                                       "no_admin_strategy":  "Tools-dir MSI extraction only; block any package route that installs the server or invokes msiexec."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "tightvnc-viewer",
+                                                 "tightvnc",
+                                                 "tvnviewer"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "tightvnc-viewer",
+                                                      "tightvnc",
+                                                      "glavsoft-tightvnc"
+                                                  ],
+                             "winget_terms":  [
+                                                  "GlavSoft.TightVNC",
+                                                  "TightVNC Viewer",
+                                                  "TightVNC"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/tightvnc_viewer_20260614/",
+    "readiness":  {
+                      "state":  "implemented",
+                      "runtime_validation":  "passed",
+                      "hardening_report":  "packaging/reports/tightvnc-viewer-hardening.md",
+                      "smoke_report":  "packaging/reports/tightvnc-viewer-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Scoop manifest installs into user-scope Scoop, creates expected shims/shortcuts, exposes expected binaries, and no matching Windows service or uninstall registry entry was observed during local validation. Chocolatey remains a submission candidate only."
+                  }
+}

@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "chatgpt",
+    "name":  "ChatGPT Desktop",
+    "version":  null,
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "unknown",
+                      "evidence":  [
+                                       "Local Scoop extras/chatgpt points to github.com/lencx/ChatGPT.",
+                                       "Chocolatey chatgpt page is ChatGPT Desktop (Unofficial)."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "Do not use local extras/chatgpt for official ChatGPT because it points to lencx/ChatGPT, an unofficial app."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  "chatgpt",
+                                       "no_admin_strategy":  "Chocolatey chatgpt is marked unofficial; block for official OpenAI desktop packaging until an official user-scoped source is available."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "chatgpt",
+                                                 "ChatGPT Desktop"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "chatgpt",
+                                                      "ChatGPT Desktop"
+                                                  ],
+                             "winget_terms":  [
+                                                  "ChatGPT Desktop"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/chatgpt_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/chatgpt-hardening.md",
+                      "smoke_report":  "packaging/reports/chatgpt-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked for official ChatGPT packaging because available Scoop/Chocolatey routes are unofficial."
+                  }
+}

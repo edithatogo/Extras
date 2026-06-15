@@ -1,0 +1,756 @@
+{
+    "generated_at":  "2026-06-15T08:58:16.6435878Z",
+    "online":  false,
+    "deep_local_scan":  false,
+    "contracts":  [
+                      {
+                          "id":  "anaconda",
+                          "name":  "Anaconda",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\anaconda3.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\anaconda3.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\versions\\bucket\\anaconda2.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\versions\\bucket\\anaconda3-2022.05.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "android-studio",
+                          "name":  "Android Studio",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\android-studio.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\android-studio.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\versions\\bucket\\android-studio-beta.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\versions\\bucket\\android-studio-canary.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "antigravity",
+                          "name":  "Antigravity",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\antigravity.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\antigravity.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\antigravity-ide.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\main\\bucket\\antigravity-cli.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "chatgpt",
+                          "name":  "ChatGPT Desktop",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\chatgpt.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\chatgpt.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "codex",
+                          "name":  "Codex",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\codex-monitor.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\main\\bucket\\codex.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "dax-studio",
+                          "name":  "DAX Studio",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "doublshot",
+                          "name":  "DoublShot",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "droidvnc-ng",
+                          "name":  "droidVNC-NG",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "endnote",
+                          "name":  "EndNote",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "github-copilot-desktop",
+                          "name":  "GitHub Copilot Desktop",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "linear",
+                          "name":  "Linear",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "microsoft-phone-link",
+                          "name":  "Microsoft Phone Link",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "mixxx",
+                          "name":  "Mixxx",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\mixxx.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "nomachine-enterprise-client",
+                          "name":  "NoMachine Enterprise Client",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "omnivoice-studio",
+                          "name":  "OmniVoice Studio",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\omnivoice-studio.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "pencil",
+                          "name":  "Pencil",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\pencil.json",
+                                                              "bucket\\pencil2d.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\pencil.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\pencil2d.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "pinokio",
+                          "name":  "Pinokio",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\pinokio.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "power-automate-desktop",
+                          "name":  "Power Automate Desktop",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "power-automate-process-mining",
+                          "name":  "Power Automate Process Mining",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "power-bi-desktop",
+                          "name":  "Power BI Desktop",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "power-platform-toolbox",
+                          "name":  "Power Platform ToolBox",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "quickshare",
+                          "name":  "Quick Share",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "scrcpy",
+                          "name":  "scrcpy",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\escrcpy.json",
+                                                              "bucket\\guiscrcpy.json",
+                                                              "bucket\\qtscrcpy.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\escrcpy.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\guiscrcpy.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\qtscrcpy.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\main\\bucket\\scrcpy.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "scrcpy-plus",
+                          "name":  "SCRCPY+",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "tightvnc",
+                          "name":  "TightVNC Full Bundle",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\tightvnc.json",
+                                                              "bucket\\tightvnc-viewer.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\tightvnc.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "tightvnc-viewer",
+                          "name":  "TightVNC Viewer",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\tightvnc.json",
+                                                              "bucket\\tightvnc-viewer.json",
+                                                              "C:\\Users\\60217257\\scoop\\buckets\\extras\\bucket\\tightvnc.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "voicebox",
+                          "name":  "Voicebox",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+                                                              "bucket\\voicebox.json"
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "whatsapp",
+                          "name":  "WhatsApp Official App",
+                          "priority":  "requested",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      },
+                      {
+                          "id":  "xrmtoolbox",
+                          "name":  "XrmToolBox",
+                          "priority":  "high-signal",
+                          "local_scoop":  {
+                                              "status":  "ok",
+                                              "results":  [
+
+                                                          ]
+                                          },
+                          "chocolatey":  {
+                                             "status":  "skipped-offline",
+                                             "results":  [
+
+                                                         ],
+                                             "error":  null
+                                         },
+                          "winget":  {
+                                         "status":  "skipped-offline",
+                                         "results":  [
+
+                                                     ],
+                                         "error":  null
+                                     }
+                      }
+                  ]
+}

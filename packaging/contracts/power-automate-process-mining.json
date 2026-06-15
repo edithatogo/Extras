@@ -1,0 +1,68 @@
+{
+    "schema_version":  "1.0",
+    "id":  "power-automate-process-mining",
+    "name":  "Power Automate Process Mining",
+    "version":  null,
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "unknown",
+                      "evidence":  [
+                                       "No local Scoop or confirmed Chocolatey route found for a distinct Process Mining desktop app."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No separate Scoop desktop package route found."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  null,
+                                       "no_admin_strategy":  "No separate Chocolatey package route confirmed; process mining is service/web/tenant capability rather than a no-admin desktop package."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "power-automate-process-mining",
+                                                 "Power Automate Process Mining"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "power-automate-process-mining",
+                                                      "Power Automate Process Mining"
+                                                  ],
+                             "winget_terms":  [
+                                                  "Power Automate Process Mining"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/power_automate_process_mining_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/power-automate-process-mining-hardening.md",
+                      "smoke_report":  "packaging/reports/power-automate-process-mining-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked because no distinct no-admin desktop package route was identified."
+                  }
+}
