@@ -14,3 +14,4 @@
 - [x] Task: Add package contract under `packaging/contracts/`.
 - [x] Task: Remove the machine-scope manifest from this no-admin package-factory branch.
 - [x] Task: Keep runtime smoke blocked until a non-executing install route exists.
+- [x] Task: Resolve PR #3 review comments by rejecting the reviewed MSI/msiexec manifest path.
