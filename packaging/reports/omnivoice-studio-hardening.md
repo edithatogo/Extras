@@ -12,8 +12,8 @@
 ## Installer Evidence
 - MSI ProductName OmniVoice Studio
 - ALLUSERS=1
-- target directory ProgramFiles64Folder\OmniVoice Studio
-- launch target app.exe
+- extracted payload directory PFiles\OmniVoice Studio
+- launch target omnivoice-studio.exe
 - custom action downloads and invokes Microsoft Edge WebView2 installer
 
 ## No-Admin Strategy
@@ -26,7 +26,7 @@ Extract MSI/CAB payload into a user-writable package directory; never execute MS
 - Program Files write
 
 ## Target Posture
-- Scoop: `implemented` - Extract MSI payload into PFiles64\OmniVoice Studio; launch PFiles64\OmniVoice Studio\app.exe.
+- Scoop: `implemented` - Extract MSI payload into PFiles\OmniVoice Studio; launch PFiles\OmniVoice Studio\omnivoice-studio.exe.
 - Chocolatey: `candidate` - Portable extraction under $toolsDir only; block MSI execution.
 
 ## Decision

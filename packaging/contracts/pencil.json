@@ -13,7 +13,7 @@
     "type": "nsis",
     "evidence": [
       "Local Scoop extras/pencil extracts NSIS app payload into Scoop directory.",
-      "Chocolatey package source added under packaging/chocolatey/pencil."
+      "Repo-local Chocolatey source is deferred until the upstream installer SHA256 can be verified from a complete trusted artifact."
     ]
   },
   "no_admin": {
@@ -34,9 +34,9 @@
       "no_admin_strategy": "Use upstream Scoop extras/pencil for Evolus Pencil; manifest extracts NSIS app payload into Scoop directory."
     },
     "chocolatey": {
-      "status": "implemented",
+      "status": "deferred",
       "package_id": "pencil",
-      "no_admin_strategy": "Chocolatey package source extracts the NSIS app payload with 7-Zip into $toolsDir and installs a shim only."
+      "no_admin_strategy": "Package source must use SHA256 only and extract the NSIS app payload with 7-Zip into $toolsDir."
     }
   },
   "duplicate_lookup": {
@@ -59,11 +59,11 @@
   },
   "track": "conductor/tracks/pencil_20260615/",
   "readiness": {
-    "state": "candidate-requires-runtime-validation",
-    "runtime_validation": "not-run",
+    "state": "deferred",
+    "runtime_validation": "deferred",
     "hardening_report": "packaging/reports/pencil-hardening.md",
     "smoke_report": "packaging/reports/pencil-noadmin-smoke.md",
     "last_reviewed": "2026-06-15",
-    "decision": "Upstream Scoop remains covered; repo-local Chocolatey package source added, pending isolated runtime proof."
+    "decision": "Upstream Scoop remains covered. Repo-local Chocolatey packaging is deferred because the review rejected SHA1 and a complete trusted SHA256 artifact has not yet been verified in this pass."
   }
 }

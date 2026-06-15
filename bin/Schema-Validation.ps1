@@ -5,7 +5,18 @@ function Test-SchemaCompliance {
     )
 
     if (-not $env:SCOOP_HOME) {
-        $env:SCOOP_HOME = scoop prefix scoop
+        try {
+            $scoopHome = scoop prefix scoop 2>$null
+            if (-not $scoopHome) {
+                Write-Error 'SCOOP_HOME is not set and Scoop could not be located.'
+                return $false
+            }
+            $env:SCOOP_HOME = $scoopHome
+        }
+        catch {
+            Write-Error "SCOOP_HOME is not set and Scoop could not be located: $($_.Exception.Message)"
+            return $false
+        }
     }
 
     $validatorDll = "$env:SCOOP_HOME\supporting\validator\bin\Scoop.Validator.dll"

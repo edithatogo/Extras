@@ -4,7 +4,7 @@
     "name":  "NoMachine Enterprise Client",
     "version":  "9.6.3",
     "priority":  "high-signal",
-    "candidate_status":  "candidate",
+    "candidate_status":  "deferred",
     "source_policy":  {
                           "public_url_required":  true,
                           "local_files_are_evidence_only":  true
@@ -12,14 +12,14 @@
     "installer":  {
                       "type":  "nsis",
                       "evidence":  [
-                                       "Scoop manifest currently uses a silent NSIS execution with /VERYSILENT and /DIR=$dir",
-                                       "Manifest is installed in repo as bucket/nomachine-enterprise-client.json",
+                                       "Previous Scoop manifest route used a silent NSIS execution with /VERYSILENT and /DIR=$dir",
+                                       "Direct installer execution is deferred until a pure extraction route is proven",
                                        "Client-only components only; server-side components are out of scope"
                                    ]
                   },
     "no_admin":  {
                      "required":  true,
-                     "strategy":  "Prefer silent current-user install into Scoop app directory. Block if installer requires elevation or writes HKLM/Program Files/service state.",
+                     "strategy":  "Use only a proven extraction route into a user-writable package directory. Direct installer execution is blocked for no-admin submission.",
                      "hard_blockers":  [
                                            "UAC elevation",
                                            "machine-wide install service registration",
@@ -29,9 +29,8 @@
                  },
     "targets":  {
                     "scoop":  {
-                                  "status":  "implemented",
-                                  "expected_manifest":  "bucket/nomachine-enterprise-client.json",
-                                  "no_admin_strategy":  "Keep using /VERYSILENT + /DIR=$dir and avoid installer actions requiring admin rights."
+                                  "status":  "deferred",
+                                  "no_admin_strategy":  "Prove installer extraction without execution before adding a Scoop manifest."
                               },
                     "chocolatey":  {
                                        "status":  "candidate",
@@ -60,11 +59,11 @@
            },
     "track":  "conductor/tracks/nomachine_20260604/",
     "readiness":  {
-                      "state":  "implemented",
-                      "runtime_validation":  "passed",
+                      "state":  "deferred",
+                      "runtime_validation":  "deferred",
                       "hardening_report":  "packaging/reports/nomachine-enterprise-client-hardening.md",
                       "smoke_report":  "packaging/reports/nomachine-enterprise-client-noadmin-smoke.md",
                       "last_reviewed":  "2026-06-15",
-                      "decision":  "Scoop manifest installs into the user Scoop app directory, creates nxplayer shim/shortcut, exposes nxplayer.exe and nxplayer.bin, and no matching service was observed. Installer creates an HKCU uninstall entry pointing at ProgramData; this is recorded as a residual caveat for Chocolatey and upstream review."
+                      "decision":  "Previous local smoke showed a user-directory install and no matching service, but the route executed the vendor installer and created an HKCU uninstall entry pointing at ProgramData. Submission is deferred until a non-executing extraction strategy is proven."
                   }
 }

@@ -29,7 +29,4 @@ if ($process.ExitCode -ne 0) {
     throw "Anaconda installer failed with exit code $($process.ExitCode)."
 }
 
-Install-BinFile -Name 'python-anaconda' -Path (Join-Path $appDir 'python.exe')
-Install-BinFile -Name 'conda' -Path (Join-Path $appDir 'Scripts\conda.exe')
-
 Remove-Item -LiteralPath $downloadPath -Force -ErrorAction SilentlyContinue

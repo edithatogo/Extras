@@ -23,8 +23,8 @@
                       "evidence":  [
                                        "MSI ProductName OmniVoice Studio",
                                        "ALLUSERS=1",
-                                       "target directory ProgramFiles64Folder\\OmniVoice Studio",
-                                       "launch target app.exe",
+                                       "extracted payload directory PFiles\\OmniVoice Studio",
+                                       "launch target omnivoice-studio.exe",
                                        "custom action downloads and invokes Microsoft Edge WebView2 installer"
                                    ]
                   },
@@ -42,7 +42,7 @@
                     "scoop":  {
                                   "status":  "implemented",
                                   "expected_manifest":  "bucket/omnivoice-studio.json",
-                                  "no_admin_strategy":  "Extract MSI payload into PFiles64\\OmniVoice Studio; launch PFiles64\\OmniVoice Studio\\app.exe."
+                                  "no_admin_strategy":  "Extract MSI payload into PFiles\\OmniVoice Studio; launch PFiles\\OmniVoice Studio\\omnivoice-studio.exe."
                               },
                     "chocolatey":  {
                                        "status":  "candidate",

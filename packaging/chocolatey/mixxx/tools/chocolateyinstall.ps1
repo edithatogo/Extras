@@ -32,7 +32,5 @@ if (-not (Test-Path -LiteralPath (Join-Path $payload 'mixxx.exe'))) {
 
 Remove-Item -LiteralPath $appDir -Recurse -Force -ErrorAction SilentlyContinue
 Move-Item -LiteralPath $payload -Destination $appDir
-Install-BinFile -Name 'mixxx' -Path (Join-Path $appDir 'mixxx.exe')
-
 Remove-Item -LiteralPath $downloadPath -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $extractRoot -Recurse -Force -ErrorAction SilentlyContinue

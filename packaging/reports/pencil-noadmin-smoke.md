@@ -3,7 +3,7 @@
 - Contract: `pencil`
 - Track: `conductor/tracks/pencil_20260615/`
 - Last reviewed: 2026-06-15
-- Runtime validation: `not-run`
+- Runtime validation: `deferred`
 
 | Gate | Status | Evidence |
 | --- | --- | --- |

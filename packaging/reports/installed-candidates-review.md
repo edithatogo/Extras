@@ -1,6 +1,6 @@
 # Installed Candidate Signal Review
 
-Generated: 2026-06-15T08:10:13.9659633Z
+Generated: 2026-06-15T08:58:43.7141757Z
 
 ## Scope
 - Scoop: ok
@@ -8,7 +8,7 @@ Generated: 2026-06-15T08:10:13.9659633Z
 - WinGet: failed
 
 ## Summary
-- Total contracts checked: 28
+- Total contracts checked: 29
 - Installed-manager overlap signals: 6
 
 | Candidate | Priority | Candidate Status | Scoop signal | Chocolatey signal | WinGet signal |
@@ -17,7 +17,7 @@ Generated: 2026-06-15T08:10:13.9659633Z
 | DAX Studio | high-signal | candidate | - | - | - |
 | DoublShot | high-signal | candidate | - | - | - |
 | Linear | high-signal | candidate | - | - | - |
-| NoMachine Enterprise Client | high-signal | candidate | nomachine-enterprise-client | - | - |
+| NoMachine Enterprise Client | high-signal | deferred | nomachine-enterprise-client | - | - |
 | Power Platform ToolBox | high-signal | candidate | - | - | - |
 | TightVNC Full Bundle | high-signal | deferred | - | - | - |
 | XrmToolBox | high-signal | candidate | - | - | - |
@@ -29,13 +29,14 @@ Generated: 2026-06-15T08:10:13.9659633Z
 | EndNote | requested | blocked | - | - | - |
 | GitHub Copilot Desktop | requested | deferred | - | - | - |
 | Microsoft Phone Link | requested | blocked | - | - | - |
-| Mixxx | requested | candidate | mixxx | - | - |
+| Mixxx | requested | candidate | Mixxx | - | - |
 | OmniVoice Studio | requested | candidate | omnivoice studio | - | - |
 | Pencil | requested | covered | - | - | - |
 | Pinokio | requested | candidate | pinokio | - | - |
 | Power Automate Desktop | requested | blocked | - | - | - |
 | Power Automate Process Mining | requested | blocked | - | - | - |
 | Power BI Desktop | requested | blocked | - | - | - |
+| Quick Share | requested | blocked | - | - | - |
 | scrcpy | requested | covered | - | - | - |
 | SCRCPY+ | requested | candidate | - | - | - |
 | TightVNC Viewer | requested | candidate | tightvnc-viewer | - | - |
@@ -52,7 +53,7 @@ Generated: 2026-06-15T08:10:13.9659633Z
 - Voicebox (voicebox)
 
 ## Installed Coverage Gap Candidates
-- Contracts reviewed: 28
+- Contracts reviewed: 29
 
 ### Scoop (unmatched to candidate contracts)
 - 7zip
@@ -114,9 +115,13 @@ Generated: 2026-06-15T08:10:13.9659633Z
 - vcredist2022
 - vlc
 - vncviewer
+- WARN
 - webview2
 - wifiinfoview
 - windows-terminal
 - zotero
 - zoxide
+
+### Chocolatey (unmatched to candidate contracts)
+- chocolatey
 

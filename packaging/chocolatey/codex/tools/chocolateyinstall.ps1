@@ -22,5 +22,3 @@ Get-ChocolateyWebFile `
     -Url64bit 'https://github.com/openai/codex/releases/download/rust-v0.139.0/codex-windows-sandbox-setup-x86_64-pc-windows-msvc.exe' `
     -Checksum64 'd6349976daeaec8539857ba777b807f8565c09512811b4fe0678c1545213b1b1' `
     -ChecksumType64 'sha256'
-
-Install-BinFile -Name 'codex' -Path (Join-Path $toolsDir 'codex.exe')

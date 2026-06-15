@@ -27,13 +27,14 @@ function Test-Property {
 
 function Find-DuplicateJsonProperties {
     param(
-        [System.Text.Json.JsonElement]$Element,
+        [object]$Element,
         [string]$JsonPath
     )
 
     $duplicates = [System.Collections.Generic.List[string]]::new()
+    $kind = $Element.ValueKind.ToString()
 
-    if ($Element.ValueKind -eq [System.Text.Json.JsonValueKind]::Object) {
+    if ($kind -eq 'Object') {
         $names = [System.Collections.Generic.HashSet[string]]::new([System.StringComparer]::Ordinal)
         foreach ($property in $Element.EnumerateObject()) {
             if (-not $names.Add($property.Name)) {
@@ -44,7 +45,7 @@ function Find-DuplicateJsonProperties {
             }
         }
     }
-    elseif ($Element.ValueKind -eq [System.Text.Json.JsonValueKind]::Array) {
+    elseif ($kind -eq 'Array') {
         $index = 0
         foreach ($item in $Element.EnumerateArray()) {
             foreach ($duplicate in @(Find-DuplicateJsonProperties -Element $item -JsonPath "$JsonPath[$index]")) {
@@ -63,6 +64,7 @@ $validTargetStatuses = @('candidate', 'implemented', 'covered', 'blocked', 'defe
 $validReadinessStates = @('blocked', 'covered', 'implemented', 'deferred', 'candidate-requires-runtime-validation')
 $validRuntimeStates = @('passed', 'blocked', 'deferred', 'not-run', 'not-required')
 $repoRoot = (Resolve-Path "$PSScriptRoot\..\..").Path
+$hasSystemTextJson = $null -ne ('System.Text.Json.JsonDocument' -as [type])
 
 if (-not (Test-Path -LiteralPath $SchemaPath)) {
     throw "Contract schema not found: $SchemaPath"
@@ -81,17 +83,19 @@ if (-not $contractFiles) {
 $ids = @{}
 foreach ($file in $contractFiles) {
     $content = Get-Content -Raw -LiteralPath $file.FullName
-    try {
-        $document = [System.Text.Json.JsonDocument]::Parse($content)
-        $duplicates = Find-DuplicateJsonProperties -Element $document.RootElement -JsonPath '$'
-        foreach ($duplicate in $duplicates) {
-            Add-Failure $failures $file.FullName "duplicate JSON property '$duplicate'"
+    if ($hasSystemTextJson) {
+        try {
+            $document = [System.Text.Json.JsonDocument]::Parse($content)
+            $duplicates = Find-DuplicateJsonProperties -Element $document.RootElement -JsonPath '$'
+            foreach ($duplicate in $duplicates) {
+                Add-Failure $failures $file.FullName "duplicate JSON property '$duplicate'"
+            }
+            $document.Dispose()
         }
-        $document.Dispose()
-    }
-    catch {
-        Add-Failure $failures $file.FullName "invalid JSON: $($_.Exception.Message)"
-        continue
+        catch {
+            Add-Failure $failures $file.FullName "invalid JSON: $($_.Exception.Message)"
+            continue
+        }
     }
 
     try {
@@ -254,3 +258,4 @@ if ($failures.Count -gt 0) {
 }
 
 Write-Host "Validated $($contractFiles.Count) package contracts."
+exit 0

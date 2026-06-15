@@ -106,8 +106,10 @@ function Get-ScoopInstalled {
     if (Test-Path -LiteralPath $scoopExe) {
         $data = Get-ManagerInventory -Lookup { & $scoopExe list } -Label 'scoop' -ParseLine {
             param([string]$Line)
-            if ($Line -match '^\s*([^\s]+)\s+([0-9][^\s]*)') {
-                $Matches[1]
+            if ($Line -match '^\s*([^\s]+)\s+([^\s]+)') {
+                if ($Matches[1] -notin @('Installed', 'Name')) {
+                    $Matches[1]
+                }
             }
         }
         return @{
@@ -123,8 +125,10 @@ function Get-ScoopInstalled {
     }
     $data = Get-ManagerInventory -Lookup { & $command.Source list } -Label 'scoop' -ParseLine {
         param([string]$Line)
-        if ($Line -match '^\s*([^\s]+)\s+([0-9][^\s]*)') {
-            $Matches[1]
+        if ($Line -match '^\s*([^\s]+)\s+([^\s]+)') {
+            if ($Matches[1] -notin @('Installed', 'Name')) {
+                $Matches[1]
+            }
         }
     }
     return @{
@@ -139,13 +143,13 @@ function Get-ChocoInstalled {
         return @{ status = 'missing'; items = @(); error = $null }
     }
 
-    $data = Invoke-ManagerCommand -Name 'Chocolatey' -Candidates {
+    $data = Invoke-ManagerCommand -Name 'Chocolatey' -Candidates @(
         { choco list -lo -r }
         { choco list --limit-output --local-only }
         { choco list -r --local-only }
         { choco list --local-only }
         { choco list -r }
-    }
+    )
 
     if ($data.status -ne 'ok') {
         return @{
@@ -177,12 +181,12 @@ function Get-WinGetInstalled {
         return @{ status = 'missing'; items = @(); error = $null }
     }
 
-    $data = Invoke-ManagerCommand -Name 'WinGet' -Candidates {
+    $data = Invoke-ManagerCommand -Name 'WinGet' -Candidates @(
         { winget list --disable-interactivity --accept-source-agreements --output json 2>$null }
         { winget list --output json 2>$null }
         { winget list --accept-source-agreements --disable-interactivity 2>$null }
         { winget list 2>$null }
-    }
+    )
 
     if ($data.status -ne 'ok') {
         return @{
@@ -206,15 +210,37 @@ function Get-WinGetInstalled {
     }
     catch {
         $items = [System.Collections.Generic.List[string]]::new()
+        $header = $data.output | Where-Object { "$_" -match '^\s*Name\s+Id\s+Version' } | Select-Object -First 1
+        $idStart = -1
+        $versionStart = -1
+        if ($header) {
+            $headerText = "$header"
+            $idStart = $headerText.IndexOf('Id')
+            $versionStart = $headerText.IndexOf('Version')
+        }
+
         foreach ($line in $data.output) {
-            $trimmed = "$line".Trim()
-            if (-not $trimmed) {
+            $text = "$line"
+            $trimmed = $text.Trim()
+            if (-not $trimmed -or $trimmed -match '^-+$' -or $trimmed -match '^Name\s+Id\s+Version') {
                 continue
             }
-            if ($trimmed -match '^\s*([^|\s][^|]*)\s+\|\s+[0-9].*') {
-                $items.Add($Matches[1].Trim())
+
+            if ($idStart -ge 0 -and $versionStart -gt $idStart -and $text.Length -gt $idStart) {
+                $idWidth = $versionStart - $idStart
+                $id = if ($text.Length -ge $versionStart) {
+                    $text.Substring($idStart, $idWidth).Trim()
+                }
+                else {
+                    $text.Substring($idStart).Trim()
+                }
+                if ($id -and $id -notmatch '^\S*Version\S*$') {
+                    $items.Add($id)
+                    continue
+                }
             }
-            elseif ($trimmed -match '^\s*([A-Za-z0-9][A-Za-z0-9\.\-\+_]+)\s+[0-9]+\.[0-9]') {
+
+            if ($trimmed -match '^\s*([A-Za-z0-9][A-Za-z0-9\.\-\+_]+)\s+[0-9]+\.[0-9]') {
                 $items.Add($Matches[1].Trim())
             }
         }

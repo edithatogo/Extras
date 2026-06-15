@@ -16,7 +16,7 @@ Get-ChocolateyWebFile `
 
 Remove-Item -LiteralPath $extractRoot -Recurse -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path $extractRoot | Out-Null
-& $sevenZip x $downloadPath "-o$extractRoot" -y | Out-Null
+& $sevenZip x $downloadPath "-o`"$extractRoot`"" -y | Out-Null
 
 $candidate = Get-ChildItem -LiteralPath $extractRoot -Recurse -Filter 'antigravity.exe' -File | Select-Object -First 1
 if (-not $candidate) {
@@ -28,8 +28,6 @@ New-Item -ItemType Directory -Force -Path $appDir | Out-Null
 $sourceDir = Split-Path -Parent $candidate.FullName
 Copy-Item -Path (Join-Path $sourceDir '*') -Destination $appDir -Recurse -Force
 New-Item -ItemType Directory -Force -Path (Join-Path $dataDir 'user-data'), (Join-Path $dataDir 'extensions') | Out-Null
-
-Install-BinFile -Name 'antigravity' -Path (Join-Path $appDir 'bin\antigravity.cmd')
 
 Remove-Item -LiteralPath $downloadPath -Force -ErrorAction SilentlyContinue
 Remove-Item -LiteralPath $extractRoot -Recurse -Force -ErrorAction SilentlyContinue
