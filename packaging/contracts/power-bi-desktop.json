@@ -1,0 +1,69 @@
+{
+    "schema_version":  "1.0",
+    "id":  "power-bi-desktop",
+    "name":  "Power BI Desktop",
+    "version":  null,
+    "priority":  "requested",
+    "candidate_status":  "blocked",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "msi",
+                      "evidence":  [
+                                       "Local Scoop buckets did not include Power BI Desktop.",
+                                       "Registry showed related Bravo for Power BI only, not Power BI Desktop."
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Blocked until a supported current-user, no-UAC, no-HKLM, no-service route exists.",
+                     "hard_blockers":  [
+                                           "UAC prompt",
+                                           "Program Files write",
+                                           "HKLM write",
+                                           "service or driver registration",
+                                           "unofficial or ambiguous source identity"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "blocked",
+                                  "expected_manifest":  null,
+                                  "no_admin_strategy":  "No local Scoop bucket route found; block no-admin packaging because supported installers are machine/Store/enterprise oriented."
+                              },
+                    "chocolatey":  {
+                                       "status":  "blocked",
+                                       "package_id":  "powerbi",
+                                       "no_admin_strategy":  "No confirmed no-admin Chocolatey route; block until user-scoped installer evidence exists."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "power-bi-desktop",
+                                                 "Power BI Desktop"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "power-bi-desktop",
+                                                      "Power BI Desktop"
+                                                  ],
+                             "winget_terms":  [
+                                                  "Power BI Desktop"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/power_bi_desktop_20260615/",
+    "readiness":  {
+                      "state":  "blocked",
+                      "runtime_validation":  "blocked",
+                      "hardening_report":  "packaging/reports/power-bi-desktop-hardening.md",
+                      "smoke_report":  "packaging/reports/power-bi-desktop-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Blocked for no-admin Scoop/Chocolatey packaging pending a supported user-scoped installer."
+                  }
+}

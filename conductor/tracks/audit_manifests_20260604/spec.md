@@ -9,4 +9,4 @@ Establish a repeatable audit tool or script that scans active Scoop manifests to
 - Support options to selectively scan recently changed manifests for PR speed.
 
 ## Status
-- **Status:** pending
+- **Status:** completed

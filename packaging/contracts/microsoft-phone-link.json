@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "microsoft-phone-link",
+  "name": "Microsoft Phone Link",
+  "version": "unknown",
+  "priority": "requested",
+  "candidate_status": "blocked",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Phone Link is primarily a Microsoft Store/UWP experience.",
+      "Not currently available as a stable Scoop-style portable/extractable desktop distribution."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Treat as non-factory target for this repo; require external Store-managed path and document explicit blocker in both Scoop and Chocolatey candidates.",
+    "hard_blockers": [
+      "Store-only delivery path",
+      "Microsoft account pairing runtime requirements",
+      "UWP app lifecycle outside Scoop/Chocolatey packaging guarantees"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "blocked",
+      "expected_manifest": null,
+      "no_admin_strategy": "No supported Scoop implementation without Store/Appx sideload complexity and elevated provisioning behavior."
+    },
+    "chocolatey": {
+      "status": "blocked",
+      "package_id": "microsoft-phone-link",
+      "no_admin_strategy": "No non-admin Chocolatey path is proven currently; avoid creating wrapper that bypasses Store entitlement and UWP install dependencies."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "phone link",
+      "your phone"
+    ],
+    "chocolatey_terms": [
+      "phone-link",
+      "your-phone",
+      "microsoft-phone-link"
+    ],
+    "winget_terms": [
+      "Microsoft.YourPhone",
+      "Phone Link"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/microsoft_phone_link_20260613/",
+  "readiness": {
+    "state": "blocked",
+    "runtime_validation": "blocked",
+    "hardening_report": "packaging/reports/microsoft-phone-link-hardening.md",
+    "smoke_report": "packaging/reports/microsoft-phone-link-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Blocked from Scoop/Chocolatey packaging because Store/UWP entitlement and pairing lifecycle are outside deterministic no-admin package control."
+  }
+}

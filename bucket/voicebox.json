@@ -1,0 +1,48 @@
+{
+    "version": "0.5.0",
+    "description": "Local-first open-source voice cloning and speech studio.",
+    "homepage": "https://voicebox.sh",
+    "license": {
+        "identifier": "MIT",
+        "url": "https://github.com/jamiepine/voicebox/blob/main/LICENSE"
+    },
+    "notes": [
+        "No-admin route keeps MSI install metadata from running: expand the payload into user-writable Scoop directory and skip MSI custom actions.",
+        "Depend on `extras/webview2` so the app uses a fixed runtime instead of machine bootstrap."
+    ],
+    "depends": "extras/webview2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/jamiepine/voicebox/releases/download/v0.5.0/Voicebox_0.5.0_x64_en-US.msi",
+            "hash": "6242007dcee2c7127b687873c0d97d02958d6d5b3bb304dca70439ecf595cdd0"
+        }
+    },
+    "extract_dir": "PFiles\\Voicebox",
+    "bin": [
+        "voicebox.exe",
+        [
+            "voicebox-server.exe",
+            "voicebox-server"
+        ],
+        [
+            "voicebox-mcp.exe",
+            "voicebox-mcp"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "voicebox.exe",
+            "Voicebox"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/jamiepine/voicebox"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/jamiepine/voicebox/releases/download/v$version/Voicebox_$version_x64_en-US.msi"
+            }
+        }
+    }
+}

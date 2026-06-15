@@ -1,0 +1,33 @@
+{
+    "version": "9.6.3",
+    "description": "Client-only NoMachine remote desktop connection interface",
+    "homepage": "https://www.nomachine.com/enterprise/enterprise-desktop-products/enterprise-client",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.nomachine.com/licensing"
+    },
+    "notes": [
+        "This installs NoMachine Enterprise Client only. It can connect to NoMachine hosts, but it does not install the server components needed to receive incoming connections.",
+        "The installer is directed to Scoop's app directory so it can be installed without administrator rights."
+    ],
+    "url": "https://download.nomachine.com/download/9.6/Windows/nomachine-enterprise-client_9.6.3_1_x64.exe",
+    "hash": "3ddd4eff96e51850afa4cf3369ea53427586e562c5ed015a5bc0255be8fdb8a5",
+    "pre_install": [
+        "Start-Process \"$dir\\$fname\" -Args @('/VERYSILENT', \"/DIR=\"\"$dir\"\"\") -Wait",
+        "Remove-Item \"$dir\\$fname\""
+    ],
+    "bin": "bin\\nxplayer.exe",
+    "shortcuts": [
+        [
+            "bin\\nxplayer.exe",
+            "NoMachine Enterprise Client"
+        ]
+    ],
+    "checkver": {
+        "url": "https://download.nomachine.com/enterprise/",
+        "regex": "nomachine-enterprise-client_([\\d.]+)_\\d+_x64\\.exe"
+    },
+    "autoupdate": {
+        "url": "https://download.nomachine.com/download/$majorVersion.$minorVersion/Windows/nomachine-enterprise-client_$version_1_x64.exe"
+    }
+}

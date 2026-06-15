@@ -1,0 +1,8 @@
+{
+    "track_id":  "nomachine_20260604",
+    "type":  "feature",
+    "status":  "completed",
+    "created_at":  "2026-06-04T23:41:00Z",
+    "updated_at":  "2026-06-15T00:00:00Z",
+    "description":  "Create a Scoop manifest for NoMachine remote desktop application"
+}

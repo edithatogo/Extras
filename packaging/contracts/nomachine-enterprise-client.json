@@ -1,0 +1,70 @@
+{
+    "schema_version":  "1.0",
+    "id":  "nomachine-enterprise-client",
+    "name":  "NoMachine Enterprise Client",
+    "version":  "9.6.3",
+    "priority":  "high-signal",
+    "candidate_status":  "candidate",
+    "source_policy":  {
+                          "public_url_required":  true,
+                          "local_files_are_evidence_only":  true
+                      },
+    "installer":  {
+                      "type":  "nsis",
+                      "evidence":  [
+                                       "Scoop manifest currently uses a silent NSIS execution with /VERYSILENT and /DIR=$dir",
+                                       "Manifest is installed in repo as bucket/nomachine-enterprise-client.json",
+                                       "Client-only components only; server-side components are out of scope"
+                                   ]
+                  },
+    "no_admin":  {
+                     "required":  true,
+                     "strategy":  "Prefer silent current-user install into Scoop app directory. Block if installer requires elevation or writes HKLM/Program Files/service state.",
+                     "hard_blockers":  [
+                                           "UAC elevation",
+                                           "machine-wide install service registration",
+                                           "HKLM writes",
+                                           "Program Files write"
+                                       ]
+                 },
+    "targets":  {
+                    "scoop":  {
+                                  "status":  "implemented",
+                                  "expected_manifest":  "bucket/nomachine-enterprise-client.json",
+                                  "no_admin_strategy":  "Keep using /VERYSILENT + /DIR=$dir and avoid installer actions requiring admin rights."
+                              },
+                    "chocolatey":  {
+                                       "status":  "candidate",
+                                       "package_id":  "nomachine-enterprise-client",
+                                       "no_admin_strategy":  "Portable extraction or user-writable tools-only packaging only; machine-scope silent install is blocked."
+                                   }
+                },
+    "duplicate_lookup":  {
+                             "scoop_terms":  [
+                                                 "nomachine",
+                                                 "NoMachine",
+                                                 "nomachine-enterprise-client"
+                                             ],
+                             "chocolatey_terms":  [
+                                                      "nomachine",
+                                                      "nomachine-enterprise-client"
+                                                  ],
+                             "winget_terms":  [
+                                                  "NoMachine Enterprise Client"
+                                              ]
+                         },
+    "ci":  {
+               "require_contract":  true,
+               "require_duplicate_lookup":  true,
+               "require_no_admin_evidence":  true
+           },
+    "track":  "conductor/tracks/nomachine_20260604/",
+    "readiness":  {
+                      "state":  "implemented",
+                      "runtime_validation":  "passed",
+                      "hardening_report":  "packaging/reports/nomachine-enterprise-client-hardening.md",
+                      "smoke_report":  "packaging/reports/nomachine-enterprise-client-noadmin-smoke.md",
+                      "last_reviewed":  "2026-06-15",
+                      "decision":  "Scoop manifest installs into the user Scoop app directory, creates nxplayer shim/shortcut, exposes nxplayer.exe and nxplayer.bin, and no matching service was observed. Installer creates an HKCU uninstall entry pointing at ProgramData; this is recorded as a residual caveat for Chocolatey and upstream review."
+                  }
+}

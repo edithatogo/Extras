@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "id": "anaconda",
+  "name": "Anaconda",
+  "version": "2025.12-2",
+  "priority": "requested",
+  "candidate_status": "covered",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Local Scoop extras/anaconda3 exists and uses /InstallationType=JustMe /NoRegistry.",
+      "Chocolatey package source added under packaging/chocolatey/anaconda3."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Use the upstream package-manager route; do not duplicate package logic locally unless upstream route fails no-admin policy.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write",
+      "service or driver registration",
+      "unofficial or ambiguous source identity"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "covered",
+      "expected_manifest": null,
+      "no_admin_strategy": "Use upstream Scoop extras/anaconda3; it passes JustMe, NoRegistry, and user-writable destination arguments."
+    },
+    "chocolatey": {
+      "status": "implemented",
+      "package_id": "anaconda3",
+      "no_admin_strategy": "Chocolatey package source runs the official installer in JustMe, NoRegistry mode with destination under $toolsDir."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "anaconda",
+      "Anaconda"
+    ],
+    "chocolatey_terms": [
+      "anaconda",
+      "Anaconda"
+    ],
+    "winget_terms": [
+      "Anaconda"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/anaconda_20260615/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/anaconda-hardening.md",
+    "smoke_report": "packaging/reports/anaconda-noadmin-smoke.md",
+    "last_reviewed": "2026-06-15",
+    "decision": "Upstream Scoop remains covered; repo-local Chocolatey package source added, pending isolated current-user install proof."
+  }
+}

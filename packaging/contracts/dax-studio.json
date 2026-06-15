@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "id": "dax-studio",
+  "name": "DAX Studio",
+  "version": "3.5.2.1205",
+  "priority": "high-signal",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "unknown",
+    "evidence": [
+      "Installed per-user under AppData\\Local\\Programs\\DAX Studio"
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Prefer upstream per-user installer or extractable payload; reject machine-scope MSI execution.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "candidate",
+      "expected_manifest": "bucket/dax-studio.json",
+      "no_admin_strategy": "Probe upstream installer for silent current-user mode or extraction."
+    },
+    "chocolatey": {
+      "status": "candidate",
+      "package_id": "dax-studio",
+      "no_admin_strategy": "Portable or current-user install only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "dax",
+      "dax studio"
+    ],
+    "chocolatey_terms": [
+      "daxstudio",
+      "dax-studio"
+    ],
+    "winget_terms": [
+      "DAX Studio"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/installed_candidates_20260614/",
+  "readiness": {
+    "state": "candidate-requires-runtime-validation",
+    "runtime_validation": "not-run",
+    "hardening_report": "packaging/reports/dax-studio-hardening.md",
+    "smoke_report": "packaging/reports/dax-studio-noadmin-smoke.md",
+    "last_reviewed": "2026-06-14",
+    "decision": "Candidate remains blocked from hardened completion until extraction/no-admin smoke evidence is attached."
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mixxx</id>
+    <version>2.5.6</version>
+    <packageSourceUrl>https://github.com/edithatogo/Extras</packageSourceUrl>
+    <owners>edithatogo</owners>
+    <title>Mixxx</title>
+    <authors>Mixxx Development Team</authors>
+    <projectUrl>https://mixxx.org</projectUrl>
+    <licenseUrl>https://github.com/mixxxdj/mixxx/blob/2.5.6/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Free and open-source DJ mixing software.</description>
+    <summary>Mixxx portable no-admin package candidate.</summary>
+    <tags>mixxx dj audio foss no-admin</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

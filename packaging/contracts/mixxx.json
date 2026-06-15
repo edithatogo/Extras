@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "id": "mixxx",
+  "name": "Mixxx",
+  "version": "2.5.6",
+  "priority": "requested",
+  "candidate_status": "candidate",
+  "source_policy": {
+    "public_url_required": true,
+    "local_files_are_evidence_only": true
+  },
+  "installer": {
+    "type": "msi",
+    "evidence": [
+      "Official Mixxx download page lists stable 2.5.6 Windows MSI from downloads.mixxx.org.",
+      "SHA256 from official Mixxx download page is 0d1f01a1f5c2e4d4180cd462e60365d0230b405808e7bd2b6625b62a53a29c72.",
+      "Local Scoop install passed on 2026-06-15; Mixxx\\\\mixxx.exe and shim exist.",
+      "No matching Mixxx Windows service observed after Scoop install.",
+      "Chocolatey package source added under packaging/chocolatey/mixxx and choco pack succeeded."
+    ]
+  },
+  "no_admin": {
+    "required": true,
+    "strategy": "Use the official stable Windows MSI as source material. Scoop and Chocolatey routes extract into user-writable package directories and avoid installer custom actions where possible.",
+    "hard_blockers": [
+      "UAC prompt",
+      "Program Files write",
+      "HKLM write",
+      "service or driver registration",
+      "unofficial or ambiguous source identity"
+    ]
+  },
+  "targets": {
+    "scoop": {
+      "status": "implemented",
+      "expected_manifest": "bucket/mixxx.json",
+      "no_admin_strategy": "MSI payload extraction into Scoop user directory; installer custom actions are skipped."
+    },
+    "chocolatey": {
+      "status": "implemented",
+      "package_id": "mixxx",
+      "no_admin_strategy": "Chocolatey package source uses MSI administrative extraction into $toolsDir and installs a shim only."
+    }
+  },
+  "duplicate_lookup": {
+    "scoop_terms": [
+      "mixxx",
+      "Mixxx"
+    ],
+    "chocolatey_terms": [
+      "mixxx",
+      "Mixxx"
+    ],
+    "winget_terms": [
+      "Mixxx"
+    ]
+  },
+  "ci": {
+    "require_contract": true,
+    "require_duplicate_lookup": true,
+    "require_no_admin_evidence": true
+  },
+  "track": "conductor/tracks/mixxx_20260615/",
+  "readiness": {
+    "state": "implemented",
+    "runtime_validation": "passed",
+    "hardening_report": "packaging/reports/mixxx-hardening.md",
+    "smoke_report": "packaging/reports/mixxx-noadmin-smoke.md",
+    "last_reviewed": "2026-06-15",
+    "decision": "Scoop manifest installed successfully from official Mixxx 2.5.6 MSI, binary and shim exist, and no matching service was observed. Chocolatey package source compiles with choco pack but isolated Chocolatey install proof remains pending."
+  }
+}
