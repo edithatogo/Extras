@@ -1,12 +1,12 @@
 {
-    "version": "8.45",
+    "version": "8.48",
     "description": "The best freeware resource for PCB related calculations you can find",
     "homepage": "https://saturnpcb.com/saturn-pcb-toolkit/",
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.45_Setup_MSI.msi",
-            "hash": "368457ef7ad374bcedaa1032a2cb970094929b768a49a6e3739a193a423d8032"
+            "url": "https://www.saturnpcb.com/wp-content/Toolkit/Saturn_PCB_Toolkit_V8.48_Setup_MSI.msi",
+            "hash": "ac85d886a3843eb87aa43723dba763b6f5b5237f861b6c61c76847466e91e492"
         }
     },
     "pre_install": "Move-Item \"$dir\\PCB Toolkit V$version.exe\" \"$dir\\saturn.exe\"",
