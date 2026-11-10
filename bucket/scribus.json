@@ -1,5 +1,5 @@
 {
-    "version": "1.6.5",
+    "version": "1.6.7",
     "description": "Open Source Desktop Publishing",
     "homepage": "https://www.scribus.net",
     "license": "GPL-2.0-or-later",
@@ -10,12 +10,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.5/scribus-1.6.5-windows-x64.exe#/dl.7z",
-            "hash": "sha1:2193f46b41b6e1d274fa56e41fa7ca0079f32f6a"
+            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.7/scribus-1.6.7-windows-x64.exe#/dl.7z",
+            "hash": "sha1:324465c47ef4a7b71bd9d0dbaf72c8b16535d95c"
         },
         "32bit": {
-            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.5/scribus-1.6.5-windows.exe#/dl.7z",
-            "hash": "sha1:909c22d4feb4dc72db325be80c06858a9e13e22b"
+            "url": "https://sourceforge.net/projects/scribus/files/scribus/1.6.7/scribus-1.6.7-windows.exe#/dl.7z",
+            "hash": "sha1:aea9197a4a8f992d873a8486e0f9eaa61d081f20"
         }
     },
     "bin": "Scribus.exe",
