@@ -1,16 +1,16 @@
 {
-    "version": "25.4",
+    "version": "26.3",
     "description": "Real time realistic skies generator",
     "homepage": "https://stellarium.org",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Stellarium/stellarium/releases/download/v25.4/stellarium-25.4-qt6-win64.exe",
-            "hash": "7628a371c88d74ff56980b00f100beef60a18aced23db5ca8cd7ce7679c3dc9f"
+            "url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-win64.exe",
+            "hash": "06d0444e02bca3ad9703e08a641270576c1df581088eb3e7549870887e039cd8"
         },
         "arm64": {
-            "url": "https://github.com/Stellarium/stellarium/releases/download/v25.4/stellarium-25.4-qt6-arm64.exe",
-            "hash": "7a601ee438985ff474aceea612d52e74ac3930ec7feb15e2bfc5a7efbada60cb"
+            "url": "https://github.com/Stellarium/stellarium/releases/download/v26.3/stellarium-26.3-qt6-arm64.exe",
+            "hash": "06deb597dd6e1f6cc6e3bb2399df98369cdc61028eef61862bb3a49045ab75ec"
         }
     },
     "innosetup": true,
