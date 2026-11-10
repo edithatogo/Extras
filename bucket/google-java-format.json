@@ -1,5 +1,5 @@
 {
-    "version": "1.35.0",
+    "version": "2.0.0",
     "description": "Reformats Java source code to comply with Google Java Style.",
     "homepage": "https://github.com/google/google-java-format",
     "license": "Apache-2.0",
@@ -9,8 +9,8 @@
             "java/openjdk"
         ]
     },
-    "url": "https://github.com/google/google-java-format/releases/download/v1.35.0/google-java-format-1.35.0-all-deps.jar#/google-java-format.jar",
-    "hash": "bfb7f9ead6cd328389bc2da53860443bc0e805dfd08cc889bfdf43b26cb2a6e8",
+    "url": "https://github.com/google/google-java-format/releases/download/v2.0.0/google-java-format-2.0.0-all-deps.jar#/google-java-format.jar",
+    "hash": "c78feb48c549fa7114b7ea11db3b456808f7b371ffe84e6643a44dd2f9588639",
     "bin": "google-java-format.jar",
     "checkver": {
         "github": "https://github.com/google/google-java-format"
