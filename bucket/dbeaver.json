@@ -1,5 +1,5 @@
 {
-    "version": "26.0.1",
+    "version": "26.2.4",
     "description": "Database tool for developers, SQL programmers, database administrators and analysts",
     "homepage": "https://dbeaver.io",
     "license": "Apache-2.0",
@@ -12,12 +12,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://dbeaver.io/files/26.0.1/dbeaver-ce-26.0.1-windows-x86_64.zip",
-            "hash": "b661a7e2257c7703fb9a3d09ee4d3ae84b8c6da1d7374517f9ce916eb4442163"
+            "url": "https://dbeaver.io/files/26.2.4/dbeaver-ce-26.2.4-windows-x86_64.zip",
+            "hash": "e667f516d64f29b87e3571203fc3eb02f0a419b9ff66865043bf9954ebc230c6"
         },
         "arm64": {
-            "url": "https://dbeaver.io/files/26.0.1/dbeaver-ce-26.0.1-windows-aarch64.zip",
-            "hash": "f6be6aee511189083bfd3b876b375671d4b71f586b380ddee9ca828fdd51bac5"
+            "url": "https://dbeaver.io/files/26.2.4/dbeaver-ce-26.2.4-windows-aarch64.zip",
+            "hash": "15ac78b8533c4f83237c67cf458ac9966024c2c7e6a0f0aa281f62b4c8d62d75"
         }
     },
     "extract_dir": "dbeaver",
