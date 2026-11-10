@@ -1,5 +1,5 @@
 {
-    "version": "2.3.0",
+    "version": "3.5.0",
     "description": "Everything integration for the Windows taskbar.",
     "homepage": "https://github.com/srwi/EverythingToolbar",
     "license": {
@@ -13,12 +13,12 @@
     "innosetup": true,
     "architecture": {
         "64bit": {
-            "url": "https://github.com/srwi/EverythingToolbar/releases/download/2.3.0/EverythingToolbar-2.3.0-x64.exe",
-            "hash": "e732c93b299a073f7ee0fbc6707336b8037da5d7af190957e080d68c0bb5d158"
+            "url": "https://github.com/srwi/EverythingToolbar/releases/download/3.5.0/EverythingToolbar-3.5.0-x64.exe",
+            "hash": "5443ed74370bc1c5c269f4dd1c6b15babdaf08bdc55514f47002c82f720fd6d5"
         },
         "arm64": {
-            "url": "https://github.com/srwi/EverythingToolbar/releases/download/2.3.0/EverythingToolbar-2.3.0-arm64.exe",
-            "hash": "b5209d282867ef403dab57557e11959f348144678b9ae08c0488f521c1eb4d42"
+            "url": "https://github.com/srwi/EverythingToolbar/releases/download/3.5.0/EverythingToolbar-3.5.0-arm64.exe",
+            "hash": "ecde5b4833c11d02e08aaf37ea9adbf35c2622c5156a51ce59a97fad4f59b9f3"
         }
     },
     "pre_install": [
