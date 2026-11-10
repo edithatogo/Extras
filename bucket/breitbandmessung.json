@@ -1,10 +1,10 @@
 {
-    "version": "3.11.0",
+    "version": "3.13.0",
     "description": "Breitbandmessung der Bundesnetzagentur",
     "homepage": "https://breitbandmessung.de/",
     "license": "Proprietary",
-    "url": "https://download.breitbandmessung.de/bbm/Breitbandmessung-3.11.0-win.exe#/dl.7z",
-    "hash": "sha512:d220656613e502422bdb26442458210a5c350e8b11d7b079ec84cd24919d9a8df5cb2e0bb7c6cbe4a81833a738eb76a903b9c35ea3e39e0c399078af957d27e0",
+    "url": "https://download.breitbandmessung.de/bbm/Breitbandmessung-3.13.0-win.exe#/dl.7z",
+    "hash": "sha512:548d30b48612b0211437bd1cd1a18b23935ff9e6da8d97572df9a9784d90f3ed4792460a350410a7baa431f6c197d45d893508922e1051dfb19dbe94a6f85aaf",
     "architecture": {
         "64bit": {
             "installer": {
