@@ -1,5 +1,5 @@
 {
-    "version": "2026.1-261.22158.277",
+    "version": "2026.3-263.7307.200",
     "description": "Cross-Platform IDE for Java by JetBrains.",
     "homepage": "https://www.jetbrains.com/idea/",
     "license": {
@@ -13,8 +13,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://download.jetbrains.com/idea/idea-2026.1.win.zip",
-            "hash": "391ba3e676b03bbdf111c7f0d6e847b92d1b9d583c4d77e1594fa1114c0175bb",
+            "url": "https://download.jetbrains.com/idea/idea-2026.3.win.zip",
+            "hash": "42265a4a25cac579aaa4690bb3553f4b034d42282ecaea571818e611f66fbb35",
             "bin": [
                 [
                     "IDE\\bin\\idea64.exe",
@@ -29,8 +29,8 @@
             ]
         },
         "arm64": {
-            "url": "https://download.jetbrains.com/idea/idea-2026.1-aarch64.win.zip",
-            "hash": "a3c3e0904b2bc0e9caeec97a5019b8f52066c2360c141a611250a2e9dd3c064b",
+            "url": "https://download.jetbrains.com/idea/idea-2026.3-aarch64.win.zip",
+            "hash": "cebbff3c3696369130da508f2c5651387077c51d65365ca9210ee664ef4c0130",
             "bin": [
                 [
                     "IDE\\bin\\idea64.exe",
