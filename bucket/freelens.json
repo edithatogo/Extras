@@ -1,16 +1,16 @@
 {
-    "version": "1.8.1",
+    "version": "2.0.0",
     "description": "A free and open-source user interface designed for managing Kubernetes clusters",
     "homepage": "https://github.com/freelensapp/freelens",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/freelensapp/freelens/releases/download/v1.8.1/Freelens-1.8.1-windows-amd64.msi",
-            "hash": "a65d9c94e66491fde93ab275dad4c6ba1c88005433a7becf5291ed1d92fa6954"
+            "url": "https://github.com/freelensapp/freelens/releases/download/v2.0.0/Freelens-2.0.0-windows-amd64.msi",
+            "hash": "08ccae8beabc2cd9bd789a2a8883ba5c8d9093a92fdfb2abcadd76c38603e483"
         },
         "arm64": {
-            "url": "https://github.com/freelensapp/freelens/releases/download/v1.8.1/Freelens-1.8.1-windows-arm64.msi",
-            "hash": "0ff4877ff64dca1cc8f76caabe2aabd562c653c95d39f349c5cdc2a1790a2dec"
+            "url": "https://github.com/freelensapp/freelens/releases/download/v2.0.0/Freelens-2.0.0-windows-arm64.msi",
+            "hash": "9ad9570204f153ca9c4adad8051556211622c59765a517be19e38dd261d72c92"
         }
     },
     "extract_dir": "freelens",
