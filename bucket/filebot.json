@@ -1,13 +1,13 @@
 {
-    "version": "5.2.1",
+    "version": "5.3.0",
     "description": "Movies, TV Shows and Anime files organizer and renamer",
     "homepage": "https://www.filebot.net/",
     "license": {
         "identifier": "Proprietary",
         "url": "https://www.filebot.net/eula.html"
     },
-    "url": "https://get.filebot.net/filebot/FileBot_5.2.1/FileBot_5.2.1-portable.zip",
-    "hash": "8977d7c2ddbaad3c035ac73bb6033c02dc33d09f39ff3f31db4bbfe1743769c2",
+    "url": "https://get.filebot.net/filebot/FileBot_5.3.0/FileBot_5.3.0-portable.zip",
+    "hash": "a1c7e39f9c60bf32700aa30379f03531306a5471dab6f0f4c403b20dcdf544df",
     "bin": "filebot.exe",
     "shortcuts": [
         [
