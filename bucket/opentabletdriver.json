@@ -1,5 +1,5 @@
 {
-    "version": "0.6.6.2",
+    "version": "0.6.8.1",
     "description": "Open source, cross-platform, user-mode tablet driver",
     "homepage": "https://opentabletdriver.net",
     "license": {
@@ -13,8 +13,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/download/v0.6.6.2/OpenTabletDriver-0.6.6.2_win-x64.zip",
-            "hash": "c21850eb1a2651b7de49d5f73fc16daf9d07b4dd72012951f0bee98c20280fae"
+            "url": "https://github.com/OpenTabletDriver/OpenTabletDriver/releases/download/v0.6.8.1/OpenTabletDriver-0.6.8.1_win-x64.zip",
+            "hash": "a41d719621cc05f5987c251a5d35099a5d751f1ba2f454652b1aa2b87376f8bd"
         }
     },
     "pre_install": [
