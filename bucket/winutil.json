@@ -1,5 +1,5 @@
 {
-    "version": "26.03.13",
+    "version": "26.10.28",
     "description": "Chris Titus Tech's Windows Utility - Install Programs, Tweaks, Fixes, and Updates.",
     "homepage": "https://github.com/ChrisTitusTech/winutil",
     "license": "MIT",
@@ -7,8 +7,8 @@
     "suggest": {
         "gsudo": "main/gsudo"
     },
-    "url": "https://github.com/ChrisTitusTech/winutil/releases/download/26.03.13/winutil.ps1",
-    "hash": "a30ac5186ad6b8089c3ed7afa8c42de10fdcbc213a3f952f83949dd36cc3efba",
+    "url": "https://github.com/ChrisTitusTech/winutil/releases/download/26.10.28/winutil.ps1",
+    "hash": "d0444cb266953d927e5cee71455f4f1a6da2d5b3cfd7e440dceb4e6b1cbf4f7f",
     "bin": "winutil.ps1",
     "post_uninstall": [
         "if ($purge) {",
