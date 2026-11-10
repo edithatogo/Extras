@@ -1,13 +1,13 @@
 {
-    "version": "1.69.0",
+    "version": "1.76.1",
     "description": "A modern and open IDE for cloud and desktop. Theia platform based. Formerly “Theia Blueprint”.",
     "homepage": "https://theia-ide.org/#theiaide",
     "license": "EPL-2.0, GPL-2.0, MIT",
     "notes": "Settings are stored in '%APPDATA%\\Theia IDE', and are not persisted by Scoop.",
     "architecture": {
         "64bit": {
-            "url": "https://www.eclipse.org/downloads/download.php?mirror_id=1&file=/theia/ide/1.69.0/windows/TheiaIDESetup-1.69.0.exe#/dl.7z",
-            "hash": "sha512:503bd52138275ae2693650b9df3b2c5c1a11d415b1eaf572589f5eea77446482b089b20c84aa8db8a427dd1195bb1396e87830a163051a67195b012a87d9bfab"
+            "url": "https://www.eclipse.org/downloads/download.php?mirror_id=1&file=/theia/ide/1.76.1/windows/TheiaIDESetup-1.76.1.exe#/dl.7z",
+            "hash": "sha512:274ca9d04c71137e3dea43742bbaa0dd4e2de7c5ff7728d116ec1d49811d84dccd6178ae58e3fdaf1e2858ca1b5a589991c18f7b3a68ffbf10ad81229d133459"
         }
     },
     "extract_dir": "$PLUGINSDIR",
