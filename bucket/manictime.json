@@ -1,5 +1,5 @@
 {
-    "version": "2026.1.0.5",
+    "version": "2026.2.4.0",
     "description": "A time tracking software",
     "homepage": "https://www.manictime.com",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "32bit": {
-            "url": "https://cdn.manictime.com/setup/v2026_1_0_5/manictime-portable-2026.1.0.5-win-x86.zip",
-            "hash": "5864f0f4b241a83cd504d9233e390ae6290baa2161364a5c5d7008ba1257bdf7"
+            "url": "https://cdn.manictime.com/setup/v2026_2_4_0/manictime-portable-2026.2.4.0-win-x86.zip",
+            "hash": "1bb758bc5eaf307fe8b1cf6988eb6b42fb799d3a02102cf8d0812385b82dc303"
         },
         "64bit": {
-            "url": "https://cdn.manictime.com/setup/v2026_1_0_5/manictime-portable-2026.1.0.5-win-x64.zip",
-            "hash": "5ac3042070c0a37af5f210ef625d63cfe82f5221f8a239fd5f9ed5904c3a6558"
+            "url": "https://cdn.manictime.com/setup/v2026_2_4_0/manictime-portable-2026.2.4.0-win-x64.zip",
+            "hash": "0c9c87cd9ea722247f67b3a8a4a06d80c6c62b1a936f67e24e3d0ea874c1682b"
         }
     },
     "shortcuts": [
