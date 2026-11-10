@@ -1,5 +1,5 @@
 {
-    "version": "140.9.0",
+    "version": "153.7.0",
     "description": "Extended Support Release of Firefox: the popular open source web browser",
     "homepage": "https://www.firefox.com/browsers/enterprise/",
     "license": "MPL-2.0",
@@ -11,16 +11,16 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.9.0esr/win64/en-US/Firefox%20Setup%20140.9.0esr.exe#/dl.7z",
-            "hash": "sha512:a2e434717870e059b90eb96ec755772ed1b088e4a5d70011e75f1a2738857eaffc38f08403dc47ad69821e67430085ebc45916a7f1d8be0fc443153c43a045c8"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/153.7.0esr/win64/en-US/Firefox%20Setup%20153.7.0esr.exe#/dl.7z",
+            "hash": "sha512:9f67b4965d3a20a6450e229953ee482d24e9df5ea15016bc13c56c6c326420fe3f90777d10b1ab875a37b884e7d7997f958e5e41fd045b0b1d84689319c2f88a"
         },
         "32bit": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.9.0esr/win32/en-US/Firefox%20Setup%20140.9.0esr.exe#/dl.7z",
-            "hash": "sha512:6d278859445c3f1abd565e2b4bbc530695059f8c5d1358d2d79f5a56a4c75dad58ddad493de9ccec8b44473cbeacf8ea67571cfc54ec13e419c228b313fda7a9"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/153.7.0esr/win32/en-US/Firefox%20Setup%20153.7.0esr.exe#/dl.7z",
+            "hash": "sha512:3ee4d1e65b9a045baf57e751a6fdb617dea7188b4c64d62b2464025de653fa7ca42d6654869d60fe089c8c4721739cf0e4d7ffba065931bacb993d3b70155f04"
         },
         "arm64": {
-            "url": "https://archive.mozilla.org/pub/firefox/releases/140.9.0esr/win64-aarch64/en-US/Firefox%20Setup%20140.9.0esr.exe#/dl.7z",
-            "hash": "sha512:866b233401520c75773b8eb16fbe6ef62194f9c1bc50cd88d7343d13c065c5f138e917471e2c1690094b2618fb6e833af89e751dd8314e1fd35d9d4c1363b66e"
+            "url": "https://archive.mozilla.org/pub/firefox/releases/153.7.0esr/win64-aarch64/en-US/Firefox%20Setup%20153.7.0esr.exe#/dl.7z",
+            "hash": "sha512:c8e99b75cde698152a66230f506c245175251196494249f58204ecf77a2f88bda06dbabdcdd9f90a49cf6a1556d2c2e9eb33a1e617c6dd7ecb3cd6089b652e94"
         }
     },
     "extract_dir": "core",
