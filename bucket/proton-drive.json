@@ -1,16 +1,16 @@
 {
-    "version": "1.13.0",
+    "version": "3.1.0",
     "description": "Free end-to-end encrypted cloud storage made by Proton.",
     "homepage": "https://proton.me/drive",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://proton.me/download/drive/windows/1.13.0/x64/Proton%20Drive%20Setup%201.13.0.exe",
-            "hash": "072089f57972e5b70ff469df118c6599337c616c22ee8b0fbd8f474ce70e9159"
+            "url": "https://proton.me/download/drive/windows/3.1.0/x64/Proton%20Drive%20Setup%203.1.0.exe",
+            "hash": "02be5502ab7aa3db473dbc43c0990b62cbce02fcf7a728866218643ba216d8bb"
         },
         "arm64": {
-            "url": "https://proton.me/download/drive/windows/1.13.0/arm64/Proton%20Drive%20Setup%201.13.0.exe",
-            "hash": "4ea6ee738782bafcb1a296e4a7b57ffb9fe55a9689c11483d2375bba18a7dace"
+            "url": "https://proton.me/download/drive/windows/3.1.0/arm64/Proton%20Drive%20Setup%203.1.0.exe",
+            "hash": "62f2c131c95695d5c16dec2b4d26905fa8d4dcb624b3d510fa933f8edc4a9d75"
         }
     },
     "pre_install": [
