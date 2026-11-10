@@ -1,5 +1,5 @@
 {
-    "version": "2.2.0.3_stable_2026-01-06",
+    "version": "2.4.1.0_stable_2026-10-29",
     "description": "A free, open source, backup client that securely stores encrypted, incremental, compressed backups on cloud storage services and remote file servers.",
     "homepage": "https://www.duplicati.com/",
     "license": "MIT",
@@ -12,19 +12,19 @@
     ],
     "architecture": {
         "32bit": {
-            "url": "https://github.com/duplicati/duplicati/releases/download/v2.2.0.3_stable_2026-01-06/duplicati-2.2.0.3_stable_2026-01-06-win-x86-gui.zip",
-            "hash": "edbcdb9bc13d7fe915aa61670ee3d67afd468dd4675741d53828ecd7a51aad6a",
-            "extract_dir": "duplicati-2.2.0.3_stable_2026-01-06-win-x86-gui"
+            "url": "https://github.com/duplicati/duplicati/releases/download/v2.4.1.0_stable_2026-10-29/duplicati-2.4.1.0_stable_2026-10-29-win-x86-gui.zip",
+            "hash": "8daa43a4baeb57c79fb1bcbcb57b6b81de999e4d5f1964e6f109f686b3d22193",
+            "extract_dir": "duplicati-2.4.1.0_stable_2026-10-29-win-x86-gui"
         },
         "64bit": {
-            "url": "https://github.com/duplicati/duplicati/releases/download/v2.2.0.3_stable_2026-01-06/duplicati-2.2.0.3_stable_2026-01-06-win-x64-gui.zip",
-            "hash": "162c63f111c7ac4ff57ded6a2d67fbe7b127bb173fbf589013a01a7c13a9587f",
-            "extract_dir": "duplicati-2.2.0.3_stable_2026-01-06-win-x64-gui"
+            "url": "https://github.com/duplicati/duplicati/releases/download/v2.4.1.0_stable_2026-10-29/duplicati-2.4.1.0_stable_2026-10-29-win-x64-gui.zip",
+            "hash": "34f3c38466ccc738470da4f31b35effda4eef91f1314d4ea90e21362f93388c3",
+            "extract_dir": "duplicati-2.4.1.0_stable_2026-10-29-win-x64-gui"
         },
         "arm64": {
-            "url": "https://github.com/duplicati/duplicati/releases/download/v2.2.0.3_stable_2026-01-06/duplicati-2.2.0.3_stable_2026-01-06-win-arm64-gui.zip",
-            "hash": "7397751a242093460ac00c7c8586150070fd4f7e5ea49d40c46ab3b215106c8d",
-            "extract_dir": "duplicati-2.2.0.3_stable_2026-01-06-win-arm64-gui"
+            "url": "https://github.com/duplicati/duplicati/releases/download/v2.4.1.0_stable_2026-10-29/duplicati-2.4.1.0_stable_2026-10-29-win-arm64-gui.zip",
+            "hash": "8ee87b71de22709ea02fe4e7b93e20f166c7ca4e05c0858b7f6bd25087740eae",
+            "extract_dir": "duplicati-2.4.1.0_stable_2026-10-29-win-arm64-gui"
         }
     },
     "post_install": [
