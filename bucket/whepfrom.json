@@ -1,5 +1,5 @@
 {
-    "version": "0.8.1",
+    "version": "0.10.2",
     "description": "WHEP to RTP/RTSP tool.",
     "homepage": "https://live777.pages.dev",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whepfrom-v0.8.1-x86_64-pc-windows-msvc.exe#/whepfrom.exe",
-            "hash": "8cdc12b7e4862e114bb230a291cc964dad4129302d8e4caa9e664824ffc66cd3"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-x86_64-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "2543c11799589b4d7103bb74f1fdd846219329f5827d393b7876c85b097b698e"
         },
         "32bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whepfrom-v0.8.1-i686-pc-windows-msvc.exe#/whepfrom.exe",
-            "hash": "7e71eab6d326244dcb455214db87231e0197f78c054b8e99929efb4ffd54f8a7"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-i686-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "bfa5edb380002d95d65c9e3ecf9f0430f163be4d08df844a4eb490978d61108f"
         },
         "arm64": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whepfrom-v0.8.1-aarch64-pc-windows-msvc.exe#/whepfrom.exe",
-            "hash": "4f9dcbabe794f3fe2c1163b18c68863904eaf8fdcae316d51cf8bb1124ed684e"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whepfrom-v0.10.2-aarch64-pc-windows-msvc.exe#/whepfrom.exe",
+            "hash": "42c031d225752002a3bd9d08e6c012dae49d6672729ac8f2a994fcec8551baef"
         }
     },
     "bin": "whepfrom.exe",
