@@ -1,20 +1,20 @@
 {
-    "version": "1.16.2",
+    "version": "1.17.1",
     "description": "Download videos from YouTube.",
     "homepage": "https://github.com/Tyrrrz/YoutubeDownloader",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.16.2/YoutubeDownloader.win-x64.zip",
-            "hash": "fa287689af634eefcc1b03975ef744ffa67c36406f6c81293b6c5e4ccb6fb1df"
+            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.17.1/YoutubeDownloader.win-x64.zip",
+            "hash": "5a74c9318e926543e18f0106aa16517258b2628e05670d347ee435c47d60aeb1"
         },
         "32bit": {
-            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.16.2/YoutubeDownloader.win-x86.zip",
-            "hash": "5ee7f6baf8990c2013b1ceec3867a07abbf78c0243becc26e4f7e3db68e7d398"
+            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.17.1/YoutubeDownloader.win-x86.zip",
+            "hash": "b9a36a7f19505e6d0d303a46907e6d2502c4afc8a59a1d79eb4e5ba71afa8b44"
         },
         "arm64": {
-            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.16.2/YoutubeDownloader.win-arm64.zip",
-            "hash": "0c27622a2bca0d47768f14e762a01f05b5546ecef106a93dc44b55ffd35de692"
+            "url": "https://github.com/Tyrrrz/YoutubeDownloader/releases/download/1.17.1/YoutubeDownloader.win-arm64.zip",
+            "hash": "d0add7590d46775683d0ddde09c3fa0aba9d6ce3cf87852a2fc98dbb06659039"
         }
     },
     "pre_install": [
