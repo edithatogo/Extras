@@ -1,5 +1,5 @@
 {
-    "version": "129.0.5823.65",
+    "version": "140.0.6074.17",
     "description": "A fast, secure, easy-to-use browser.",
     "homepage": "https://www.opera.com",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://get.geo.opera.com/pub/opera/desktop/129.0.5823.65/win/Opera_129.0.5823.65_Setup_x64.exe",
-            "hash": "611361513515c72b266c125d204b7feeb83354a43603c99fcff94b61bb0b05e2"
+            "url": "https://get.geo.opera.com/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup_x64.exe",
+            "hash": "68d8057091392ee1c9038dbc16298fe12f7b1f8d2019a6eccd205ed03cd0c298"
         },
         "32bit": {
-            "url": "https://get.geo.opera.com/pub/opera/desktop/129.0.5823.65/win/Opera_129.0.5823.65_Setup.exe",
-            "hash": "6e9f9faaf954d9a5680d0ae86202a08979f3d251f54027494e2e776dfee1a3c5"
+            "url": "https://get.geo.opera.com/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup.exe",
+            "hash": "aa763e2b1fbdfcacf823cdea4d04ac0b364cd67afbd1c63231a82b411bec83fb"
         },
         "arm64": {
-            "url": "https://get.geo.opera.com/pub/opera/desktop/129.0.5823.65/win/Opera_129.0.5823.65_Setup_arm64.exe",
-            "hash": "2e8debc9f60da3a286250b79dcb85b282065f6ae8a61082cfa45400ab20d38f4"
+            "url": "https://get.geo.opera.com/pub/opera/desktop/140.0.6074.17/win/Opera_140.0.6074.17_Setup_arm64.exe",
+            "hash": "f54f755155b29fb21f52e1c674844bcc3944e70c0f64e7f63886688e48540bc6"
         }
     },
     "installer": {
