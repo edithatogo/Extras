@@ -1,5 +1,5 @@
 {
-    "version": "3.16.0",
+    "version": "3.26.2",
     "description": "A powerful and intuitive tool for editing CSV files.",
     "homepage": "https://smoothcsv.com/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/kohii/smoothcsv3/releases/download/v3.16.0/SmoothCSV_3.16.0_x64_portable.zip",
-            "hash": "48d65c799e13de2ef296966be7c042b5024b91fd9bd88393ec1ebb6fd11b8a02"
+            "url": "https://github.com/kohii/smoothcsv3/releases/download/v3.26.2/SmoothCSV_3.26.2_x64_portable.zip",
+            "hash": "23925110d171806300cbc4b84929f3f6427d8311c05bf666fe9970760f9871d3"
         },
         "arm64": {
-            "url": "https://github.com/kohii/smoothcsv3/releases/download/v3.16.0/SmoothCSV_3.16.0_arm64_portable.zip",
-            "hash": "df36c9a94e613dfabf492076245e68af3e0d79bc986db7131a69865146ffe89a"
+            "url": "https://github.com/kohii/smoothcsv3/releases/download/v3.26.2/SmoothCSV_3.26.2_arm64_portable.zip",
+            "hash": "09ca5cc9561a0e189154d2a3592bdbb714f3dff897f3c8e18772505171f18451"
         }
     },
     "bin": "bin\\smoothcsv.exe",
