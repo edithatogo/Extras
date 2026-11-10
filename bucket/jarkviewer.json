@@ -1,5 +1,5 @@
 {
-    "version": "1.33",
+    "version": "2.0",
     "description": "Simple, fast image viewer supporting static, animated, live, and RAW formats.",
     "homepage": "https://github.com/jark006/JarkViewer",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/jark006/JarkViewer/releases/download/v1.33/JarkViewer.exe",
-            "hash": "6d27a72f4859e64491e440e1563e91bbb67deee9c5e25921008d6760721c70af"
+            "url": "https://github.com/jark006/JarkViewer/releases/download/v2.0/JarkViewer.exe",
+            "hash": "95f5474930f0fa3c2e15050da2842420bfb737e054f737d9d9c081503d313c13"
         }
     },
     "bin": "JarkViewer.exe",
