@@ -1,10 +1,10 @@
 {
-    "version": "0.20.2",
+    "version": "0.40.16",
     "description": "Get up and running with large language models locally.",
     "homepage": "https://ollama.com/",
     "license": "MIT",
-    "url": "https://github.com/ollama/ollama/releases/download/v0.20.2/OllamaSetup.exe",
-    "hash": "31358c5062d608353a69f0f0ef3006dc397b7017819b9cb412a9a96ed2aa0bcc",
+    "url": "https://github.com/ollama/ollama/releases/download/v0.40.16/OllamaSetup.exe",
+    "hash": "84db4f756ddc9e091142a85cdc0f7ae5db68bc9b3e075f114388b326f8ed912d",
     "architecture": {
         "64bit": {
             "pre_install": [
