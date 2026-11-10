@@ -1,5 +1,5 @@
 {
-    "version": "3.6.2.18",
+    "version": "3.6.2.22",
     "homepage": "https://www.adventuregamestudio.co.uk/",
     "description": "An IDE and the engine meant for creating and running videogames of adventure (aka “quest”) genre.",
     "license": {
@@ -9,8 +9,8 @@
     "suggest": {
         "vcredist": "extras/vcredist2022"
     },
-    "url": "https://github.com/adventuregamestudio/ags/releases/download/v3.6.2.18/AGS-3.6.2.18-P8.exe",
-    "hash": "5fa6c656ade4b1a26a2a1a204fb007773bc1234e91578db223fe3b7334e952c7",
+    "url": "https://github.com/adventuregamestudio/ags/releases/download/v3.6.2.22/AGS-3.6.2.22-P12.exe",
+    "hash": "3426b2a5a47f4969e2e526c3a5b7b789fd3a3f38fbe9c6fb57ebd298b46d4823",
     "innosetup": true,
     "shortcuts": [
         [
