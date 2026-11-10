@@ -1,11 +1,11 @@
 {
-    "version": "3.11",
+    "version": "3.13",
     "description": "A professional open source system to create Windows installers.",
     "homepage": "https://nsis.sourceforge.io/Main_Page",
     "license": "Zlib",
-    "url": "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.11/nsis-3.11.zip",
-    "hash": "sha1:ef7ff767e5cbd9edd22add3a32c9b8f4500bb10d",
-    "extract_dir": "nsis-3.11",
+    "url": "https://downloads.sourceforge.net/project/nsis/NSIS%203/3.13/nsis-3.13.zip",
+    "hash": "sha1:db14f8af2ea346b786c6ae19343f61aaf5e09b8e",
+    "extract_dir": "nsis-3.13",
     "bin": [
         "bin\\makensis.exe",
         "makensisw.exe"
