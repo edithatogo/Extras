@@ -1,5 +1,5 @@
 {
-    "version": "10.11.7",
+    "version": "12.4",
     "description": "Software Media System",
     "homepage": "https://jellyfin.org",
     "license": "GPL-2.0-only",
@@ -9,12 +9,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://repo.jellyfin.org/files/server/windows/stable/v10.11.7/amd64/jellyfin_10.11.7-amd64.zip",
-            "hash": "md5:886fbd814cee2519133cc4b8da223e1f"
+            "url": "https://repo.jellyfin.org/files/server/windows/stable/v12.4/amd64/jellyfin_12.4-amd64.zip",
+            "hash": "md5:d390761b996d08b7bc24e5201c61b72b"
         },
         "arm64": {
-            "url": "https://repo.jellyfin.org/files/server/windows/stable/v10.11.7/arm64/jellyfin_10.11.7-arm64.zip",
-            "hash": "md5:1b3abb0574afe0ae8bf112aade8a071a"
+            "url": "https://repo.jellyfin.org/files/server/windows/stable/v12.4/arm64/jellyfin_12.4-arm64.zip",
+            "hash": "md5:e557588ea7fb414c40fdbdf2f185d62f"
         }
     },
     "extract_dir": "jellyfin",
