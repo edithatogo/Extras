@@ -1,5 +1,5 @@
 {
-    "version": "0.8.1",
+    "version": "0.10.2",
     "description": "A very simple, high performance, edge WebRTC SFU.",
     "homepage": "https://live777.pages.dev",
     "license": {
@@ -8,19 +8,19 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/live777-v0.8.1-x86_64-pc-windows-msvc.zip",
-            "hash": "fceb9b08297688aa109f0b233f4a3e0aec235bbd8eee9a8677bde12045227e5d",
-            "extract_dir": "live777-v0.8.1-x86_64-pc-windows-msvc"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/live777-v0.10.2-x86_64-pc-windows-msvc.zip",
+            "hash": "32da1ed456b132d2e10d284f8d7cf05123d84d7b124759a38bf9c19e04fd378d",
+            "extract_dir": "live777-v0.10.2-x86_64-pc-windows-msvc"
         },
         "32bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/live777-v0.8.1-i686-pc-windows-msvc.zip",
-            "hash": "7c7f0d30be8342c8de5985a4168477ab12a6b16f441d75a39f13a2cc1fa98a0e",
-            "extract_dir": "live777-v0.8.1-i686-pc-windows-msvc"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/live777-v0.10.2-i686-pc-windows-msvc.zip",
+            "hash": "659f9e5b4c7425cca51c437a5697cad259af37407db7e7619dee980a8d470ede",
+            "extract_dir": "live777-v0.10.2-i686-pc-windows-msvc"
         },
         "arm64": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/live777-v0.8.1-aarch64-pc-windows-msvc.zip",
-            "hash": "de1a717c57ca11f20301db2024855dcf594a720c66d1bbd542072e66be9689a2",
-            "extract_dir": "live777-v0.8.1-aarch64-pc-windows-msvc"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/live777-v0.10.2-aarch64-pc-windows-msvc.zip",
+            "hash": "ef13dc3758cc38e3da1c1d8c69b2e95cf83240611b8154b6d97336965dc71ff1",
+            "extract_dir": "live777-v0.10.2-aarch64-pc-windows-msvc"
         }
     },
     "bin": "live777.exe",
