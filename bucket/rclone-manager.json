@@ -1,5 +1,5 @@
 {
-    "version": "0.2.3",
+    "version": "0.3.5",
     "description": "A powerful, cross-platform GUI for managing Rclone remotes with style and ease.",
     "homepage": "https://zarestia-dev.github.io/rclone-manager/",
     "license": "GPL-3.0-or-later",
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.2.3/RClone.Manager_0.2.3_x64-setup.exe#/dl.7z",
-            "hash": "e98a7c4eae3755a4f86ecec8ef1e0fb5723571282a3312bc198d4124874a717f"
+            "url": "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.3.5/RClone.Manager_0.3.5_x64-setup.exe#/dl.7z",
+            "hash": "267a513e9ef81d38caf9f91f1f702afd7be88aefac2eeb11a8f1a79111754dcc"
         },
         "arm64": {
-            "url": "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.2.3/RClone.Manager_0.2.3_arm64-setup.exe#/dl.7z",
-            "hash": "3b1d95cbf4982341f941ddde6347388920aaa274d6203a2e71accb71cbd4e1b1"
+            "url": "https://github.com/Zarestia-Dev/rclone-manager/releases/download/v0.3.5/RClone.Manager_0.3.5_arm64-setup.exe#/dl.7z",
+            "hash": "d39b75083d6dd127fb85fc326e5453ea99acc40bd3e18d88200e8574c871ccdd"
         }
     },
     "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Force -Recurse",
