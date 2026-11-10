@@ -1,5 +1,5 @@
 {
-    "version": "0.8.1",
+    "version": "0.10.2",
     "description": "RTP/RTSP to WHIP tool.",
     "homepage": "https://live777.pages.dev",
     "license": {
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whipinto-v0.8.1-x86_64-pc-windows-msvc.exe#/whipinto.exe",
-            "hash": "b7398e7f680acad8f4148f675a3c5febb5f3f1facab14c948e59e19cddf3e90e"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-x86_64-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "dd33b54cd7edeb569b2d2f5d1893ab27be833f27c0093706138798679b330ef8"
         },
         "32bit": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whipinto-v0.8.1-i686-pc-windows-msvc.exe#/whipinto.exe",
-            "hash": "79bf44cab304d3507feccd985800b3d5ac4a836e78ddbacdf327f8dc8070759c"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-i686-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "b79979eb2fe192bd7d9831d414f18503726ee29d7d9c72ef24ff1a2ce843feac"
         },
         "arm64": {
-            "url": "https://github.com/binbat/live777/releases/download/v0.8.1/whipinto-v0.8.1-aarch64-pc-windows-msvc.exe#/whipinto.exe",
-            "hash": "243f2ff6b81a2c5db9ead3fec39201a403f4ad1dc0fa599f743d5c8661124d00"
+            "url": "https://github.com/binbat/live777/releases/download/v0.10.2/whipinto-v0.10.2-aarch64-pc-windows-msvc.exe#/whipinto.exe",
+            "hash": "f433afe88f94a9192635712d6a2558d5229429daf46dac5a9b389de59d4bb96b"
         }
     },
     "bin": "whipinto.exe",
