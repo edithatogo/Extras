@@ -1,13 +1,13 @@
 {
-    "version": "8.44-5935",
+    "version": "8.60-6120",
     "description": "Comprehensive Hardware Analysis, Monitoring and Reporting for Windows and DOS.",
     "homepage": "https://www.hwinfo.com",
     "license": {
         "identifier": "Freeware",
         "url": "https://www.hwinfo.com/licenses/"
     },
-    "url": "https://www.sac.sk/download/utildiag/hwi_844.zip",
-    "hash": "b295a8dacbf32378f6c290f85752ed2a32a8eaf84ad958540f4c1a604a5f67a6",
+    "url": "https://www.sac.sk/download/utildiag/hwi_860.zip",
+    "hash": "0f7726ee30f6b040cc13aa9de5a19619545a00dd7515fc17ebea9f9f2996e83c",
     "architecture": {
         "64bit": {
             "pre_install": "Get-ChildItem -Path $dir -Include '*32*', '*ARM*' -Recurse -File | Remove-Item -Force -ErrorAction SilentlyContinue",
