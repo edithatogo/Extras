@@ -1,16 +1,16 @@
 {
-    "version": "3.2.2",
+    "version": "3.2.8",
     "description": "GNU Image Manipulation Program",
     "homepage": "https://www.gimp.org",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.2-setup.exe",
-            "hash": "cbdcdb49c144d5ef26693f03939fff22770bed22b83da7c420cdfe78a18b383e"
+            "url": "https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.8-setup.exe",
+            "hash": "1d78874295661d791eaf149982e9b3564888631ea29186da5ff99e8114020a5b"
         },
         "arm64": {
-            "url": "https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.2-setup.exe",
-            "hash": "cbdcdb49c144d5ef26693f03939fff22770bed22b83da7c420cdfe78a18b383e"
+            "url": "https://download.gimp.org/mirror/pub/gimp/v3.2/windows/gimp-3.2.8-setup.exe",
+            "hash": "1d78874295661d791eaf149982e9b3564888631ea29186da5ff99e8114020a5b"
         }
     },
     "installer": {
