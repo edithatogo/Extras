@@ -1,5 +1,5 @@
 {
-    "version": "2.5.2",
+    "version": "2.6.2",
     "description": "Software synthesizer based on the SoundFont 2 specifications.",
     "homepage": "https://www.fluidsynth.org",
     "license": {
@@ -8,14 +8,14 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.5.2/fluidsynth-v2.5.2-win10-x64-cpp11.zip",
-            "hash": "0edc3b084d7ea0c9ad5706022ef37cf09b941bb2d4384814189e9b7fde8c194c",
-            "extract_dir": "fluidsynth-v2.5.2-win10-x64-cpp11"
+            "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.2/fluidsynth-v2.6.2-win10-x64-cpp11.zip",
+            "hash": "808295345d43c9c428f3fa87d29fbf97a9926f356df95559ff2689f3bd4072d7",
+            "extract_dir": "fluidsynth-v2.6.2-win10-x64-cpp11"
         },
         "32bit": {
-            "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.5.2/fluidsynth-v2.5.2-win10-x86-cpp11.zip",
-            "hash": "19fb522af58681983eb5b001ff7473c88e37e1a1180389e38a0cd98ae4fddcd7",
-            "extract_dir": "fluidsynth-v2.5.2-win10-x86-cpp11"
+            "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.2/fluidsynth-v2.6.2-win10-x86-cpp11.zip",
+            "hash": "2a0f610a58f7cb1699c7faea597850e48ac8332d1873e4bcc9e9b3b308e01f2e",
+            "extract_dir": "fluidsynth-v2.6.2-win10-x86-cpp11"
         }
     },
     "env_add_path": "bin",
