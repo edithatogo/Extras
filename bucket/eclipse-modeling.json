@@ -1,12 +1,12 @@
 {
-    "version": "2026-03",
+    "version": "2026-09",
     "description": "Eclipse Modeling Tools",
     "homepage": "https://www.eclipse.org",
     "license": "EPL-1.0",
     "architecture": {
         "64bit": {
-            "url": "http://download.eclipse.org/technology/epp/downloads/release/2026-03/R/eclipse-modeling-2026-03-R-win32-x86_64.zip",
-            "hash": "sha512:e1bfe1356cdca1b99bd9c56b7dee3a2bd7e075aa7797dd42515b366d14568d6466d48323b0f96c55ccd75ffe9dfe75de6734f51f7b880d5471f2f0c3e572cd63"
+            "url": "http://download.eclipse.org/technology/epp/downloads/release/2026-09/R/eclipse-modeling-2026-09-R-win32-x86_64.zip",
+            "hash": "sha512:0fce50604679aa668f66a28c1be0cfa56263d83157389ad5fac39c905470dcb0f277d160afa8ab3217563c98aa87d726a7d328bbd864a313ddfee0f13e6b8cf9"
         }
     },
     "extract_dir": "eclipse",
