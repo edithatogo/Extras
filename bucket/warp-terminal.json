@@ -1,5 +1,5 @@
 {
-    "version": "0.2026.03.25.08.24.stable_09",
+    "version": "0.2026.11.04.08.17.stable_01",
     "description": "Modern, Rust-based terminal with AI built in so you and your team can build great software, faster.",
     "homepage": "https://www.warp.dev/",
     "license": {
@@ -8,12 +8,12 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://releases.warp.dev/stable/v0.2026.03.25.08.24.stable_09/WarpSetup.exe",
-            "hash": "f4e2b349cc3c6db54cc96772c90bf384ef3a1706ae84a519af27286d53c2c382"
+            "url": "https://releases.warp.dev/stable/v0.2026.11.04.08.17.stable_01/WarpSetup.exe",
+            "hash": "a50d6082208a195da9e7f2357da4866e7133b937a28ff1962772e7e232986531"
         },
         "arm64": {
-            "url": "https://releases.warp.dev/stable/v0.2026.03.25.08.24.stable_09/WarpSetup-arm64.exe",
-            "hash": "d2aa274c5ccb787ba67b76019fba83768f5c782b85968af251ec5dd7c77c81c8"
+            "url": "https://releases.warp.dev/stable/v0.2026.11.04.08.17.stable_01/WarpSetup-arm64.exe",
+            "hash": "ea22c118475fb9e17bd5a95e302e9e820a7eadc205bf279c51e44979bc8e1617"
         }
     },
     "innosetup": true,
