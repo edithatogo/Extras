@@ -1,5 +1,5 @@
 {
-    "version": "8.25.8200",
+    "version": "8.40.5000",
     "description": "System information, diagnostics, and auditing application",
     "homepage": "https://www.aida64.com/products/aida64-business",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://download.aida64.com/aida64business825.zip",
-            "hash": "03cb63dbd707896f7c1c221c0e1c0b50ab7a55c7bb8ead865f90932f73b87b5a"
+            "url": "https://download.aida64.com/aida64business840.zip",
+            "hash": "e15af3e51c216090855f9e4bc8008d69ab0d8cdbb508264aa6307b4677522d35"
         }
     },
     "bin": "aida64.exe",
