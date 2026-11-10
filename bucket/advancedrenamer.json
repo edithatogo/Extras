@@ -1,5 +1,5 @@
 {
-    "version": "4.20",
+    "version": "4.28",
     "description": "Batch file renaming utility for Windows",
     "homepage": "https://www.advancedrenamer.com",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://www.advancedrenamer.com/down/win/advanced_renamer_portable_4_20.zip",
-            "hash": "813767d096ae7f5d4b4527c1e154317c51e4c480c1b6511cc7ff4c9207d4bb29"
+            "url": "https://www.advancedrenamer.com/down/win/advanced_renamer_portable_4_28.zip",
+            "hash": "3fd581ec9459f31c7c9ebd948719e07ce6b437e6117f7c53eb5802de2f79606e"
         }
     },
     "bin": "arenc.exe",
