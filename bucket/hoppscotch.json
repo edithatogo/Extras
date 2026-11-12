@@ -1,5 +1,5 @@
 {
-    "version": "26.3.0-0",
+    "version": "26.10.1-0",
     "description": "A cross-platform desktop application that helps you create and manage API requests",
     "homepage": "https://hoppscotch.com/",
     "license": {
@@ -8,8 +8,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://github.com/hoppscotch/releases/releases/download/v26.3.0-0/Hoppscotch_win_x64.msi",
-            "hash": "e360045fe53f70f9265818de5fb3209e54c2b86f23cbfc7b0f0b55f5d5083145"
+            "url": "https://github.com/hoppscotch/releases/releases/download/v26.10.1-0/Hoppscotch_win_x64.msi",
+            "hash": "7e1dfb1e1a5fb0b30777a3338c2d410b32810ec2bad3a76967beeb95df7383e8"
         }
     },
     "extract_dir": "PFiles\\Hoppscotch",
