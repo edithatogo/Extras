@@ -1,10 +1,10 @@
 {
-    "version": "5.15",
+    "version": "5.17",
     "description": "Personal and small-business financial-accounting software",
     "homepage": "https://www.gnucash.org/",
     "license": "GPL-2.0-or-later",
-    "url": "https://github.com/Gnucash/gnucash/releases/download/5.15/gnucash-5.15.setup.exe",
-    "hash": "6e10f34f92a1464b45436372a70cdbd16636b14b2842431b72251ded780858bd",
+    "url": "https://github.com/Gnucash/gnucash/releases/download/5.17/gnucash-5.17.setup.exe",
+    "hash": "a3e8049755e536f647640762a483ebe1b6c79cc50cc81a746fa64a404e98d271",
     "innosetup": true,
     "architecture": {
         "64bit": {
