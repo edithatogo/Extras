@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: If you use this fork, please cite it using these metadata and identify the
+  commit or release used. Upstream attribution is recorded in references.
+title: Scoop Extras
+authors:
+- name: Scoop Extras project
+repository-code: https://github.com/edithatogo/Extras
+url: https://github.com/edithatogo/Extras
+references:
+- type: software
+  title: Scoop Extras
+  authors:
+  - name: Scoop Extras project
+  repository-code: https://github.com/ScoopInstaller/Extras
+  url: https://github.com/ScoopInstaller/Extras
